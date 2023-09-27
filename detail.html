@@ -22,7 +22,7 @@
     <div id="allbox">
         <div id="detailMain">
             <div id="pleaseLogin">
-                please Sign-In First
+               
             </div>
             <div id="detailImageBox2">
                 <p></p>
@@ -31,6 +31,7 @@
             </div>
             <div id="detailMainLeft">
                 <div id="detailImageBox"></div>
+                <div id="soldOut"></div>
 
                 <div id="detail3Info">
                     <div id="detailInfoL"><p>Pieces</p><br><span></span></div>
@@ -54,10 +55,10 @@
                     <li id="detailListPrice"><p>#Price</p><span></span></li>
                     <li id="detailListTheme"><p>#Theme</p><span></span></li>
                     <li id="detailListButton">
-                        <div id="detailListButtonMinus">-</div>
+                        <div id="detailListButtonMinus"></div>
                         <input type="text" name="detailListButtonQuant" id="detailListButtonQuant" value="1" onkeypress="return isNumber(event)">
-                        <div id="detailListButtonPlus">+</div>
-                        <div id="detailListButtonBuy">buy</div>
+                        <div id="detailListButtonPlus"></div>
+                        <div id="detailListButtonBuy">BUY</div>
                     </li>
                 </ul>
             </div>
@@ -126,11 +127,14 @@
             buying = false;
             $('#detailListButtonBuy').addClass("unview")
             $('#detailImageBox img').addClass("unview")
+            $("#detailListButtonQuant").val(0)
+            $('#soldOut').addClass("view")
         }
         else {
             buying = true;
             $('#detailListButtonBuy').removeClass("unview")
             $('#detailImageBox img').removeClass("unview")
+            $('#soldOut').removeClass("view")
         }
         let c=0;
         $.get(`./text/${detailItem.lessgoIndex}.txt`, function (data) {
@@ -144,16 +148,18 @@
        
         $(document).on("click", '#detailListButtonMinus', function () {
             if ($("#detailListButtonQuant").val() > 1) {
+                
                 let temp = $("#detailListButtonQuant").val();
                 temp--;
                 $("#detailListButtonQuant").val(temp)
+                
             }
         })
         $(document).on("click", '#detailListButtonPlus', function () {
-
-            let temp = $("#detailListButtonQuant").val();
+            if ($("#detailListButtonQuant").val() > 1){
+                let temp = $("#detailListButtonQuant").val();
             temp++;
-            $("#detailListButtonQuant").val(temp)
+            $("#detailListButtonQuant").val(temp)}
 
         })
 
