@@ -83,7 +83,9 @@ $(document).on("click",".headerMessageBoxNo", function(){
         location.href='./goods.html'
     })
     $(document).on("click", '#headerHelp', function(){
-        window.open('https://www.lego.com/en-ca/service')
+        
+         sessionStorage.setItem("IndexPortal", 'https://www.lego.com/en-ca/service')
+            location.href = './loading.html'
     })
     $(document).on("click", '#headerShoplist', function(){
         location.href='./bag.html'
