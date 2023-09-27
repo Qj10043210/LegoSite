@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates&display=swap');
 #allbox {
     position: relative;
     height: auto;
     max-width: 1440px;
     min-width: 1440px;
     margin: 0px auto;
-    background-color: blanchedalmond;
+    
     height: 960px;
     display: flex;
     align-items: center;
@@ -14,8 +15,8 @@
     font-size: 16px;
     #goodsNav {
         width: 200%;
-        height: 100px;
-        background-color: rebeccapurple;
+        height: 135px;
+        
         position: absolute;
         top: 85px;
         left: 0px;
@@ -26,8 +27,8 @@
             position: absolute;
             width: 30px;
             height: 30px;
-            top: 35px;
-            left: -40px;
+            top: 42px;
+            left: -43px;
             // background-color: red;
             background-image: url(./images/left.png);
             background-size: 100% 100%;
@@ -45,8 +46,8 @@
             position: absolute;
             width: 30px;
             height: 30px;
-            top: 35px;
-            left: 1450px;
+            top: 42px;
+            left: 1453px;
             background-image: url(./images/right.png);
             background-size: 100% 100%;
             z-index: 100;
@@ -63,18 +64,21 @@
             height: 100%;
             width: 150px;
             margin-right: 10px;
-            background-color: yellow;
+            background: rgb(255,255,255);
+// background: radial-gradient(circle, rgba(255,255,255,1) 77%, rgba(0,0,0,0.43461134453781514) 100%);
+            box-shadow: 0px 0px 5px 1px rgba(10,10,10,0.7);
             display: flex;
             align-items: center;
             overflow: hidden;
-
+            justify-content: center;
             &.unview {
                 display: none;
             }
 
             img {
                 cursor: pointer;
-                // height: 80%;
+                height: 100%;
+                width: auto;
 
             }
         }
@@ -89,11 +93,14 @@
 
     #goodsNow {
         width: 100%;
-
+        font-family: 'Bebas Neue';
+        font-size: 56px;
         position: absolute;
         top: 300px;
         height: 60px;
-        background-color: yellowgreen;
+        padding-top: 5px;
+        background: rgb(236,255,254);
+background: radial-gradient(circle, rgba(236,255,254,0.8995973389355743) 20%, rgba(255,255,255,1) 89%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -110,13 +117,13 @@
     #goodsList {
         width: 100%;
         
-        background-color: aqua;
+        // background-color: aqua;
         position: absolute;
-        top: 365px;
+        top: 385px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-
+        padding-bottom: 30px;
         .goodsItemsBox {
             flex-shrink: 0;
             cursor: pointer;
@@ -127,6 +134,10 @@
             justify-content: center;
             align-items: center;
             // background-color: cornflowerblue;
+            &.able0 img{
+                filter: grayscale(70%) brightness(60%);
+            }
+
             img {
                 display: block;
                 max-width: 100%;
@@ -143,13 +154,19 @@
             }
 
             p {
+                font-family: 'Montserrat Alternates';
+                font-size: 20px;
                 position: absolute;
                 bottom: 10px;
                 left: 0;
                 right: 0;
+                padding: 3px 0;
                 margin-left: 0;
                 margin-right: 0;
                 text-align: center;
+                color: white;
+                background: rgb(0,0,0);
+background: radial-gradient(circle, rgba(0,0,0,0.9500175070028011) 53%, rgba(255,255,255,0) 97%);
             }
 
         }

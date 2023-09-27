@@ -25,7 +25,7 @@
                 please Sign-In First
             </div>
             <div id="detailImageBox2">
-                <p>The item added to your bag</p>
+                <p></p>
                 <button type="button" id="detailImageBox2View">VIEW BAG</button>
                 <button type="button" id="detailImageBox2Keep">CLOSE</button>
             </div>
@@ -33,9 +33,9 @@
                 <div id="detailImageBox"></div>
 
                 <div id="detail3Info">
-                    <div id="detailInfoL"></div>
-                    <div id="detailInfoM"></div>
-                    <div id="detailInfoR"></div>
+                    <div id="detailInfoL"><p>Pieces</p><br><span></span></div>
+                    <div id="detailInfoM"><p>Ages</p><br><span></span></div>
+                    <div id="detailInfoR"><p>minifigures</p><br><span></span></div>
                 </div>
             </div>
             <div id="detailMainRight">
@@ -44,13 +44,15 @@
                         <div id="detailStars">
 
                         </div>
-                        <div id="detailNew" class="univew">New</div>
+                        <div id="detailNew" class="univew">NEW</div>
                     </li>
                     <li id="detailListIndex">
-                        </li#>
-                    <li id="detailListName"></li>
-                    <li id="detailListPrice"></li>
-                    <li id="detailListTheme"></li>
+                        <p>#Index</p>
+                        <span></span>
+                        </li>
+                    <li id="detailListName"><p>#Title</p><span></span></li>
+                    <li id="detailListPrice"><p>#Price</p><span></span></li>
+                    <li id="detailListTheme"><p>#Theme</p><span></span></li>
                     <li id="detailListButton">
                         <div id="detailListButtonMinus">-</div>
                         <input type="text" name="detailListButtonQuant" id="detailListButtonQuant" value="1" onkeypress="return isNumber(event)">
@@ -75,13 +77,13 @@
         document.title = detailItem.lessgoName;
         let detailimage = `<img src="https://github.com/jillina1004/imagebox/blob/main/${detailItem.lessgoIndex}.png?raw=true" alt="${detailItem.lessgoIndex}"></img>`
         $('#detailImageBox').append(detailimage)
-        $('#detailInfoL').append(detailItem.lessgoPiece)
-        $('#detailInfoM').append(detailItem.lessgoAge)
-        $('#detailInfoR').append(detailItem.lessgoMan)
-        $('#detailListIndex').append(detailItem.lessgoIndex)
-        $('#detailListName').append(detailItem.lessgoName)
-        $('#detailListPrice').append(detailItem.lessgoPrice)
-        $('#detailListTheme').append(detailItem.lessgoTheme)
+        $('#detailInfoL span').append(detailItem.lessgoPiece)
+        $('#detailInfoM span').append(detailItem.lessgoAge)
+        $('#detailInfoR span').append(detailItem.lessgoMan)
+        $('#detailListIndex span').append(detailItem.lessgoIndex)
+        $('#detailListName span').append(detailItem.lessgoName)
+        $('#detailListPrice span').append(detailItem.lessgoPrice)
+        $('#detailListTheme span').append(detailItem.lessgoTheme)
         let rateStar = detailItem.lessgoRate * 10
         let rateStar2 = rateStar % 10;
         let rateStar3 = 0;
@@ -123,10 +125,12 @@
         if (detailItem.lessgoBuy == false) {
             buying = false;
             $('#detailListButtonBuy').addClass("unview")
+            $('#detailImageBox img').addClass("unview")
         }
         else {
             buying = true;
             $('#detailListButtonBuy').removeClass("unview")
+            $('#detailImageBox img').removeClass("unview")
         }
         let c=0;
         $.get(`./text/${detailItem.lessgoIndex}.txt`, function (data) {
@@ -139,7 +143,7 @@
         
        
         $(document).on("click", '#detailListButtonMinus', function () {
-            if ($("#detailListButtonQuant").val() != 0) {
+            if ($("#detailListButtonQuant").val() > 1) {
                 let temp = $("#detailListButtonQuant").val();
                 temp--;
                 $("#detailListButtonQuant").val(temp)

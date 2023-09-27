@@ -28,12 +28,13 @@
                 <div class="uahha"></div>
             </div>
             <div id="FlowChar2">
+                
+                
                 <div class="no" id="FlowId"></div>
-                <div class="uahha"></div>
                 <div class="no" id="FlowMail"></div>
-                <div class="uahha"></div>
+                
                 <div class="no" id="FlowPhone"></div>
-                <div class="uahha"></div>
+                
             </div>
 
         </div>
@@ -52,6 +53,7 @@
             backgroundRepeat: "no-repeat",
             backgroundPosition: "-590px -309px"
         })
+        let c = `<div class="c"></div>`
         let b = `<br>`
         $('#FlowId').text(AllYourName[objIndex].id)
         $('#FlowMail').text(AllYourName[objIndex].email)
@@ -59,6 +61,9 @@
         $('#FlowId').prepend(b)
         $('#FlowMail').prepend(b)
         $('#FlowPhone').prepend(b)
+        $('#FlowId').append(c)
+        $('#FlowMail').append(c)
+        $('#FlowPhone').append(c)
     </script>
     <!-- <script>var colors = [
         "red",

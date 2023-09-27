@@ -1,10 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates&display=swap");
 #allbox {
   position: relative;
   height: auto;
   max-width: 1440px;
   min-width: 1440px;
   margin: 0px auto;
-  background-color: blanchedalmond;
   height: 960px;
   display: flex;
   align-items: center;
@@ -15,8 +15,7 @@
 }
 #allbox #goodsNav {
   width: 200%;
-  height: 100px;
-  background-color: rebeccapurple;
+  height: 135px;
   position: absolute;
   top: 85px;
   left: 0px;
@@ -27,8 +26,8 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 35px;
-  left: -40px;
+  top: 42px;
+  left: -43px;
   background-image: url(./images/left.png);
   background-size: 100% 100%;
   z-index: 10;
@@ -43,8 +42,8 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 35px;
-  left: 1450px;
+  top: 42px;
+  left: 1453px;
   background-image: url(./images/right.png);
   background-size: 100% 100%;
   z-index: 100;
@@ -59,16 +58,20 @@
   height: 100%;
   width: 150px;
   margin-right: 10px;
-  background-color: yellow;
+  background: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px 1px rgba(10, 10, 10, 0.7);
   display: flex;
   align-items: center;
   overflow: hidden;
+  justify-content: center;
 }
 #allbox #goodsNav .goodsNavEl.unview {
   display: none;
 }
 #allbox #goodsNav .goodsNavEl img {
   cursor: pointer;
+  height: 100%;
+  width: auto;
 }
 #allbox #goodsNav #goodsNavShowing {
   width: 1440px;
@@ -78,10 +81,14 @@
 }
 #allbox #goodsNow {
   width: 100%;
+  font-family: "Bebas Neue";
+  font-size: 56px;
   position: absolute;
   top: 300px;
   height: 60px;
-  background-color: yellowgreen;
+  padding-top: 5px;
+  background: rgb(236, 255, 254);
+  background: radial-gradient(circle, rgba(236, 255, 254, 0.8995973389) 20%, rgb(255, 255, 255) 89%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,12 +101,12 @@
 }
 #allbox #goodsList {
   width: 100%;
-  background-color: aqua;
   position: absolute;
-  top: 365px;
+  top: 385px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding-bottom: 30px;
 }
 #allbox #goodsList .goodsItemsBox {
   flex-shrink: 0;
@@ -110,6 +117,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#allbox #goodsList .goodsItemsBox.able0 img {
+  filter: grayscale(70%) brightness(60%);
 }
 #allbox #goodsList .goodsItemsBox img {
   display: block;
@@ -124,11 +134,17 @@
   box-shadow: 2px 2px 4px rgba(4, 4, 4, 0.5);
 }
 #allbox #goodsList .goodsItemsBox p {
+  font-family: "Montserrat Alternates";
+  font-size: 20px;
   position: absolute;
   bottom: 10px;
   left: 0;
   right: 0;
+  padding: 3px 0;
   margin-left: 0;
   margin-right: 0;
   text-align: center;
+  color: white;
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.950017507) 53%, rgba(255, 255, 255, 0) 97%);
 }/*# sourceMappingURL=goods.css.map */

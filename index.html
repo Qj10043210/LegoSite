@@ -94,7 +94,21 @@
                 </div>
             </div>
         </div>
+        <div class="helpBox">
+            <div class="helpBoxCharecter">
 
+            </div>
+            <div class="helpBoxMiddle">
+                <h3>Hey! How can we help you?</h3>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                </ul>
+            </div>
+            <div class="helpBoxNull"></div>
+        </div>
     </div>
     <div class="footer"></div>
     <script>//callUp
@@ -130,10 +144,17 @@
         });
     </script>
     <script>
-        let q = parseInt($(`.mainSlickIn2`).css("top")) + parseInt($(`.mainSlickIn2`).css("height"))
-console.log(q)
-q = q + "px"
-$(`#main`).css("height",q)
+        let q = $('#mainSlickOut').height() + parseInt($('.helpBox').css("height"))
+        q = q -120 + 'px'
+        let w = $('#mainSlickOut').height()
+        $('.helpBox').css("top", w)
+        $('#main').css("height", q)
+        $('.footer').css({
+            zIndex : '20',
+            left:'0',
+            right:'0',
+            position : "absolute"
+        })
     </script>
 </body>
 
