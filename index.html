@@ -7,31 +7,32 @@
     <title>Lessgo Lego</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script src="./dist/dom-to-image.min.js"></script>
 </head>
 <body>
     <div class="header"></div>
     <div class="nav"></div>
-    
+    <div ><img id="ig" src="" alt=""></div>
+    >
+    <script>
+        let cart = JSON.parse(localStorage.getItem("signupdata"))
+        console.log(cart)
+        console.log("aaa")
+        $('#ig').attr('src', cart[0].picture)
+
+
+        
+    </script>
     <script>//callUp
 $('.header').load('./header.html')
 $('.nav').load('./nav.html')
     </script>
-    <script>
-        
-        function a(num){
-            let abc =0;
-            abc += num;
-            console.log(abc)
-        }
-    </script>
-    <script>
-        a(15);
-        // console.log(abc)
-    </script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="module" src="./js/index.js"></script>
+<script type="module" src="./js/jshead.js"></script>
 </body>
 </html>

@@ -1,0 +1,119 @@
+#legoHeader {
+    max-width: auto;
+    height: 75px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    #header {
+        width: 1440px;
+        height: 100%;
+        // background-color: blue;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px 15px;
+        #headerLeft {
+            display: flex;
+            align-items: center;
+            
+            div{
+                padding-right: 50px;
+            }
+            #headerLog {
+                div{
+                    width: 55px;
+                    height: 55px;
+                    background-image: url(./images/header_logo.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                span{
+                    display: none;
+                }
+            }
+
+            #headerGoods {}
+
+            #headerHelp {}
+        }
+
+        #headerRight {
+            display: flex;
+            align-items: center;
+            
+            div{
+                padding-left: 50px;
+            }
+            #headerSign {
+                display: flex;
+                align-items: center;
+                div{
+                    padding: 0;
+                    width: 30px;
+                    height: 32px;
+                    background-image: url(./images/legohead2.PNG);
+                    
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    display: block;
+                    line-height: 32px;
+                    &.loging{
+                        background-image: url(./images/legohead.PNG);
+                    }
+                }
+                span{
+                    padding-left: 3px;
+                    display: block;
+                }
+            }
+
+            #headerShoplist {
+                display: flex;
+                align-items: center;
+                div{
+                    padding: 0;
+                    width: 30px;
+                    height: 32px;
+                    background-image: url(./images/legobag.PNG);
+                    
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    display: block;
+                    line-height: 32px;
+                }
+                span{
+                    
+                    display: none;
+                }
+            }
+
+            #headerPersonal {
+                span{
+                    display: block;
+                &.unview{
+                    display: none;
+                }
+                }
+                
+            }
+        }
+
+    }
+    #headerMessageBox{
+
+        display: flex;
+        width: 449px;
+        height: 132px;
+        position: absolute;
+        background-color: red;
+        top:50px;
+        justify-content: center;
+        align-items: end;
+        z-index: 50;
+        &.unview{
+            display: none;
+        }
+    }
+}

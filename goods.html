@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goods</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <style>
+        #goodsAll{
+            width: 100%;
+            height: 100%;
+        }
+        #goodsNavi{
+            width: 100%;
+            height: 30%;
+            background-color: red;
+        }
+    </style>
+    <div class="header"></div>
+    <div id="allbox">
+        <div id="goodsAll">
+            <div id="goodsNavi"></div>
+            <div id="goodsshowing"></div>
+        </div>
+    </div>
+    <script>$('.header').load('./header.html')</script>
+    <script type="module" src="./js/jsgoods.js"></script>
+</body>
+</html>
