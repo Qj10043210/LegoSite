@@ -20,8 +20,8 @@
 #allbox #detailMain #pleaseLogin {
   margin: 0 auto;
   top: 11%;
-  position: absolute;
-  background-image: url(./images/messageWelcome.png);
+  position: fixed;
+  background-image: url(./images/messagePlease.png);
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 30;
@@ -88,6 +88,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
 }
 #allbox #detailMain #detailMainLeft #detailImageBox {
   width: 750px;
@@ -105,6 +106,19 @@
 }
 #allbox #detailMain #detailMainLeft #detailImageBox img.unview {
   filter: grayscale(100%) brightness(80%) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+}
+#allbox #detailMain #detailMainLeft #soldOut {
+  width: 750px;
+  height: 750px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 700px 330px;
+  background-image: url(./images/soldOut.png);
+  display: none;
+}
+#allbox #detailMain #detailMainLeft #soldOut.view {
+  display: block;
 }
 #allbox #detailMain #detailMainLeft #detail3Info {
   margin-top: 0%;
@@ -204,44 +218,58 @@
   justify-content: center;
   -moz-column-gap: 10px;
        column-gap: 10px;
+  align-items: center;
 }
 #allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonMinus {
-  width: 25px;
-  height: 25px;
-  background-color: azure;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
   text-align: center;
   line-height: 20px;
   font-size: 20px;
   cursor: zoom-out;
+  background-image: url(./images/BtnRed.png);
+  transition: all 0.5s;
+  background-size: cover;
 }
 #allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonPlus {
-  width: 25px;
-  height: 25px;
-  background-color: azure;
+  width: 35px;
+  height: 35px;
   text-align: center;
   line-height: 20px;
   font-size: 20px;
   cursor: zoom-in;
+  background-image: url(./images/BtnBlue.png);
+  background-size: cover;
 }
 #allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonQuant {
+  margin: 0px 10px;
   border: none;
   width: 50px;
-  height: 25px;
+  height: 30px;
   background-color: azure;
   text-align: center;
   line-height: 20px;
   font-size: 20px;
   cursor: text;
+  border-radius: 5px;
+  border: 2px solid #000;
 }
 #allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy {
   margin-left: 50px;
-  width: 35px;
-  height: 25px;
-  background-color: azure;
+  background-color: #ddd;
+  width: 62px;
+  height: 38px;
+  border: 2px solid #000;
+  border-radius: 10px;
   text-align: center;
-  line-height: 20px;
+  line-height: 38px;
   font-size: 20px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy:hover {
+  filter: brightness(130%);
 }
 #allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy.unview {
   background-color: black;
@@ -264,10 +292,30 @@
   line-height: 2em;
   padding-bottom: 30px;
 }
+#allbox #detailMain #detailMainBottom p::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/oneBlock.png);
+  background-position: -8px 0px;
+  margin-right: 5px;
+}
 #allbox #detailMain #detailMainBottom ul {
   font-family: "Manrope";
-  line-height: 2em;
+  line-height: 3em;
   font-size: 20px;
   text-indent: 50px;
   padding-left: 50px;
+}
+#allbox #detailMain #detailMainBottom ul li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(./images/oneBlock.png);
+  filter: grayscale(40%);
+  background-size: 100% 100%;
+  margin-right: 5px;
+  margin-top: 5px;
 }/*# sourceMappingURL=detail.css.map */

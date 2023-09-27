@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Manrope&family=Montserrat+Alternates&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Great+Vibes&family=Manrope&family=Montserrat+Alternates&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap');
 #allbox {
     max-width: 1440px;
     min-width: 1440px;
@@ -14,8 +14,9 @@
     position: relative;
 }
 #bagNoItems{
+    font-family: 'Great Vibes';
     width: 100%;
-    height: 350px;
+    height: 550px;
     background-color: beige;
     position: absolute;
     top: 10px;
@@ -23,6 +24,16 @@
     display: none;
     justify-content: center;
     align-items: center;
+    font-size: 60px;
+    filter: grayscale(30%);
+    background-image: (url(./images/Wedonthave.png));
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-radius: 20px;
+    box-shadow: inset 0px 0px 5px 5px white;
+    p{
+        padding-left: 240px;
+    }
     &.view{
         display: flex;
     }

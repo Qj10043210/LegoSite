@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Great+Vibes&family=Manrope&family=Montserrat+Alternates&family=Mukta&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap");
 #allbox {
   position: relative;
   height: auto;
@@ -134,17 +134,20 @@
   box-shadow: 2px 2px 4px rgba(4, 4, 4, 0.5);
 }
 #allbox #goodsList .goodsItemsBox p {
-  font-family: "Montserrat Alternates";
+  width: 290px;
+  font-family: "Mukta";
   font-size: 20px;
   position: absolute;
-  bottom: 10px;
-  left: 0;
-  right: 0;
+  bottom: 15px;
+  left: 15px;
   padding: 3px 0;
   margin-left: 0;
   margin-right: 0;
   text-align: center;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: white;
-  background: rgb(0, 0, 0);
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.950017507) 53%, rgba(255, 255, 255, 0) 97%);
+  background: rgba(2, 108, 185, 0.9);
 }/*# sourceMappingURL=goods.css.map */

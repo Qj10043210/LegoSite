@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Great+Vibes&family=Manrope&family=Montserrat+Alternates&family=Mukta&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap');
+
 #allbox {
     position: relative;
     height: auto;
     max-width: 1440px;
     min-width: 1440px;
     margin: 0px auto;
-    
+
     height: 960px;
     display: flex;
     align-items: center;
@@ -13,10 +14,11 @@
     font-family: 'Black Ops One', cursive;
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
+
     #goodsNav {
         width: 200%;
         height: 135px;
-        
+
         position: absolute;
         top: 85px;
         left: 0px;
@@ -64,13 +66,14 @@
             height: 100%;
             width: 150px;
             margin-right: 10px;
-            background: rgb(255,255,255);
-// background: radial-gradient(circle, rgba(255,255,255,1) 77%, rgba(0,0,0,0.43461134453781514) 100%);
-            box-shadow: 0px 0px 5px 1px rgba(10,10,10,0.7);
+            background: rgb(255, 255, 255);
+            // background: radial-gradient(circle, rgba(255,255,255,1) 77%, rgba(0,0,0,0.43461134453781514) 100%);
+            box-shadow: 0px 0px 5px 1px rgba(10, 10, 10, 0.7);
             display: flex;
             align-items: center;
             overflow: hidden;
             justify-content: center;
+
             &.unview {
                 display: none;
             }
@@ -99,8 +102,8 @@
         top: 300px;
         height: 60px;
         padding-top: 5px;
-        background: rgb(236,255,254);
-background: radial-gradient(circle, rgba(236,255,254,0.8995973389355743) 20%, rgba(255,255,255,1) 89%);
+        background: rgb(236, 255, 254);
+        background: radial-gradient(circle, rgba(236, 255, 254, 0.8995973389355743) 20%, rgba(255, 255, 255, 1) 89%);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -116,7 +119,7 @@ background: radial-gradient(circle, rgba(236,255,254,0.8995973389355743) 20%, rg
 
     #goodsList {
         width: 100%;
-        
+
         // background-color: aqua;
         position: absolute;
         top: 385px;
@@ -124,6 +127,7 @@ background: radial-gradient(circle, rgba(236,255,254,0.8995973389355743) 20%, rg
         flex-wrap: wrap;
         justify-content: space-around;
         padding-bottom: 30px;
+
         .goodsItemsBox {
             flex-shrink: 0;
             cursor: pointer;
@@ -133,8 +137,9 @@ background: radial-gradient(circle, rgba(236,255,254,0.8995973389355743) 20%, rg
             display: flex;
             justify-content: center;
             align-items: center;
+
             // background-color: cornflowerblue;
-            &.able0 img{
+            &.able0 img {
                 filter: grayscale(70%) brightness(60%);
             }
 
@@ -153,20 +158,24 @@ background: radial-gradient(circle, rgba(236,255,254,0.8995973389355743) 20%, rg
                 box-shadow: 2px 2px 4px rgba(4, 4, 4, 0.5);
             }
 
-            p {
-                font-family: 'Montserrat Alternates';
+            p { width: 290px;
+                font-family: 'Mukta';
                 font-size: 20px;
                 position: absolute;
-                bottom: 10px;
-                left: 0;
-                right: 0;
+                bottom: 15px;
+                left: 15px;
+                
                 padding: 3px 0;
                 margin-left: 0;
                 margin-right: 0;
                 text-align: center;
+                word-break: keep-all;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
                 color: white;
-                background: rgb(0,0,0);
-background: radial-gradient(circle, rgba(0,0,0,0.9500175070028011) 53%, rgba(255,255,255,0) 97%);
+                background: rgb(2, 108, 185, 0.9);
+                
             }
 
         }
