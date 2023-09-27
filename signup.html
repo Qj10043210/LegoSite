@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signUp</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./dist/dom-to-image.min.js"></script>
+</head>
+<body id="body">
+    <style>
+        #yesss{
+            position: absolute;
+            top: 10px;
+            left:10px;
+            display: none;
+        }
+    </style>
+    <div id="yesss"></div>
+    <div id="allbox">
+        <section id="signUp">
+            <div id="signUpMinifigure">
+                <div class="head2"></div>
+                <div id="minifigureHTML"></div>
+            </div>
+            <div id="signUpInfobox">
+                <div>
+                    <form action="#" method="get" class="signUpForm">
+                        <table>
+                            <colgroup>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th colspan="2"><p class="signUpFormHead">Let's Go, Our Lego land!</p>
+                                    <p >Please fill up the form below</p>
+                                    <p class="signUpFormStatus"></p><!--메시지 뜰 예정-->
+                                </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td>ID</td>
+                                    <td><input type="text" autocomplete="off" id="signUpFormName"></td>
+                                </tr>
+                                <tr>
+                                    <td>PASSWORD</td>
+                                    <td><input type="password" autocomplete="off" id="signUpFormPassword"></td>
+                                </tr>
+                                <tr>
+                                    <td>E-MAIL</td>
+                                    <td><input type="text" autocomplete="off" id="signUpFormEmail"></td>
+                                </tr>
+                                <tr>
+                                    <td>PHONE NUMBER</td>
+                                    <td><input type="text" autocomplete="off" id="signUpFormPhone"></td>
+                                </tr>
+                                <tr>
+                                    <td>GENDER</td>
+                                    <td>
+                                        <input list="signUpFormGenders" name="signUpFormGender" id="signUpFormGender" >
+                                        <datalist id="signUpFormGenders">
+                                            <option value="male"></option>
+                                            <option value="non-binary"></option>
+                                            <option value="female"></option>
+                                            <option value="cisgender"></option>
+                                            <option value="transgender"></option>
+                                            <option value="MTF"></option>
+                                            <option value="FTM"></option>
+                                            <option value="transfemine"></option>
+                                            <option value="transmasculine"></option>
+                                            <option value="agender"></option>
+                                            <option value="genderless"></option>
+                                            <option value="graygender"></option>
+                                            <option value="demigender"></option>
+                                            <option value="androgyne"></option>
+                                            <option value="neutrois"></option>
+                                            <option value="bigender"></option>
+                                            <option value="trigender"></option>
+                                            <option value="genderfluid"></option>
+                                            <option value="genderflux"></option>
+                                            <option value="Apache Attack Helicopter"></option>
+                                            <option value="omnigender"></option>
+                                            <option value="polygender"></option>
+                                            <option value="genderqueer"></option>
+                                            <option value="gender noncomforming"></option>
+                                            <option value="gender variant"></option>
+                                            <option value="gender neutral"></option>
+
+                                        </datalist>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>BIRTHDAY</td>
+                                    <td><input type="date" name="signUpFormBirth" id="signUpFormBirth"></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="2" id="signUpButton">
+                                        <button id="signUpButtonBack">back</button>
+                                        <button id="signUpButtonClear">clear</button>
+                                        <button id="signUpButtonDone">confirm</button>
+                                    </td>
+                                    
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </form>
+                </div>
+                <div class="head2"></div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        $("#minifigureHTML").load('./minifigure.html')
+    </script>
+    
+        <script type="module" src="./js/jssignup.js"></script>
+    
+</body>
+</html>

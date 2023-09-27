@@ -1,0 +1,81 @@
+.test {
+  display: block;
+  max-width: 100%;
+  background-color: darksalmon;
+  opacity: 0.8;
+  margin: 0px 40px;
+  padding: 80px 0;
+}
+
+#allbox {
+  max-width: 1680px;
+  min-width: 1680px;
+  margin: 0px auto;
+  background-color: blanchedalmond;
+  height: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#allbox #signUp {
+  width: 80%;
+  height: 720px;
+  background-color: white;
+  display: flex;
+  border: 5px solid #000;
+  border-radius: 20px;
+}
+#allbox #signUp #signUpMinifigure {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: aliceblue;
+  border-radius: 15px 0px 0px 15px;
+  border-right: 5px solid #000;
+}
+#allbox #signUp #signUpMinifigure div.head2 {
+  width: 70%;
+  height: 10%;
+  position: absolute;
+  top: calc(-10% - 5px);
+  background-color: azure;
+  left: 15%;
+  border-radius: 15px 15px 0px 0px;
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+  border-right: 5px solid #000;
+}
+#allbox #signUp #signUpMinifigure #minifigureHTML {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#allbox #signUp #signUpInfobox {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(53, 64, 73);
+  border-radius: 0px 15px 15px 0px;
+}
+#allbox #signUp #signUpInfobox div.head2 {
+  width: 70%;
+  height: 10%;
+  position: absolute;
+  top: calc(-10% - 5px);
+  background-color: azure;
+  left: 15%;
+  border-radius: 15px 15px 0px 0px;
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+  border-right: 5px solid #000;
+}
+#allbox #signUp #signUpInfobox .signUpForm table thead .signUpFormStatus {
+  display: flex;
+  justify-content: space-around;
+}
+#allbox #signUp #signUpInfobox .signUpForm table thead .signUpFormStatus span {
+  display: inline-block;
+}
+#allbox #signUp #signUpInfobox .signUpForm table tbody tr td input.infoError {
+  border: red 1px solid;
+}/*# sourceMappingURL=index.css.map */

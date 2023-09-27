@@ -1,0 +1,53 @@
+<nav id="legoNav">
+    <style>
+        .your-class{
+            width: 80%;
+            margin: 0px auto;
+            border: 0.1px solid #000;
+            text-align: center;
+            background-color: aliceblue;
+        }
+        .your-class div {   
+            
+        }
+        .your-class div h3{
+            border: 1px solid #f52;
+            width: 40px;
+            padding: 3px;
+            margin: 3px 5px;
+            white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+        }
+    </style>
+    <div class="your-class" data-slick='{"slidesToShow": 10, "slidesToScroll": 4}'>
+        <div><h3>1</h3></div>
+        <div><h3>2</h3></div>
+        <div><h3>3</h3></div>
+        <div><h3>4</h3></div>
+        <div><h3>5</h3></div>
+        <div><h3>6</h3></div>
+        <div><h3>7</h3></div>
+        <div><h3>8</h3></div>
+        <div><h3>9</h3></div>
+        <div><h3>10</h3></div>
+        <div><h3>11</h3></div>
+        <div><h3>12</h3></div>
+        <div><h3>13</h3></div>
+        <div><h3>14</h3></div>
+        <div><h3>15</h3></div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.your-class').slick({
+                accessibility : false,
+                arrows : false,
+                customPaging : 5,
+                speed:1800,
+                infinite: true
+            });
+        });
+    </script>
+
+</nav>
