@@ -4,7 +4,7 @@
     max-width: 1440px;
     min-width: 1440px;
     margin: 0px auto;
-    background-color: blanchedalmond;
+    // background-color: blanchedalmond;
     height: 960px;
     display: flex;
     align-items: center;
@@ -17,16 +17,19 @@
     .slick-arrow {
         position: absolute;
         z-index: 10;
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         font-size: 0px;
         border: none;
+        background-color: white;
+        filter: none;
         &.slick-prev{
             // background-color: red;
             top: 30%;
             left:-5%;
             background-image: url(./images/left.png);
             background-size: 100% 100%;
+            filter: none;
             
         }
         &.slick-next{
@@ -41,9 +44,11 @@
         margin: 0px auto;
         width: 1440px;
         height: auto;
-        background-color: antiquewhite;
+        // background-color: antiquewhite;
         position: relative;
+        
         .mainSlickIn {
+            filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.7)) ;
             padding-top: 30px;
             width: 100%;
             height: 500px;
@@ -174,6 +179,7 @@
             padding-top: 30px;
             width: 100%;
             height: 500px;
+            filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.7)) ;
             // background-color: chartreuse;
 
             .mainSlickForm {
@@ -248,7 +254,7 @@
                     position: absolute;
                     display:flex;
                     justify-content: center;
-                    filter: drop-shadow(5px 5px 5px #000) ;
+                    // filter: drop-shadow(5px 5px 5px #000) ;
                     // background-color: black;
                     
                     

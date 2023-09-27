@@ -128,14 +128,16 @@
             buying = true;
             $('#detailListButtonBuy').removeClass("unview")
         }
+        let c=0;
         $.get(`./text/${detailItem.lessgoIndex}.txt`, function (data) {
 
             let a = data
             $('#detailMainBottom').append(a)
-
+            c = $('#detailMainBottom').height()
 
         }, 'text');
-
+        
+       
         $(document).on("click", '#detailListButtonMinus', function () {
             if ($("#detailListButtonQuant").val() != 0) {
                 let temp = $("#detailListButtonQuant").val();
@@ -189,6 +191,7 @@
             else {
                 //구매 불가능 상품
             }
+            
         })
         $(document).on("click", '#pleaseLogin', function () {
             $('#pleaseLogin').delay(200).fadeOut()
@@ -201,7 +204,7 @@
             location.href = './bag.html'
         })
 
-
+        
     </script>
     <script>
         function isNumber(evt) { //<input type="text" onkeypress="return isNumber(event)>
@@ -215,6 +218,16 @@
         $('#detailListButtonQuant').bind('keyup blur', function () {
     $(this).val($(this).val().replace(/[^0-9]/g, ''))
 });
+    </script>
+    <script>
+        if(c>0){
+            let q = parseInt($('#detailMain').css("height")) + c +  "px"
+        console.log(q)
+            $('#allbox').css({
+                height: q
+                
+            })
+        }
     </script>
 </body>
 

@@ -180,7 +180,11 @@
             }
             $("#goodsList *").remove()
             $("#goodsList").append(divBox)
-
+            
+            let p = parseInt($('#goodsList').css("height")) + parseInt($('#goodsList').css("top"))
+            p = p + "px"
+            $('#allbox').css("height", p )
+            
 
 
 
