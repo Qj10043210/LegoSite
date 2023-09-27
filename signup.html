@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>signUp</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/signup.css">
     <link rel="stylesheet" href="./css/header.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
         integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
@@ -19,7 +19,7 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body id="body">
 
     <div class="header" style="width:100%;"></div>
     <div id="yesss"></div>
@@ -70,7 +70,8 @@
                                 <tr>
                                     <!-- <td>E-MAIL</td> -->
                                     <td><input class="infovalue" type="text" autocomplete="off" id="signUpFormEmail"
-                                            placeholder="E-MAIL"></td>
+                                            placeholder="E-MAIL">
+                                            <div id="emailerror" >YOU MUST INCLUDE WITH '@' '.' </div></td>
                                 </tr>
                                 <tr>
                                     <!-- <td>PHONE NUMBER</td> -->
@@ -97,9 +98,9 @@
                             <tfoot>
                                 <tr>
                                     <td colspan="2" id="signUpButton">
-                                        <button type="button" id="signUpButtonBack">back</button>
-                                        <button type="button" id="signUpButtonClear">clear</button>
-                                        <button type="button" id="signUpButtonDone">confirm</button>
+                                        <button type="button" id="signUpButtonBack">BACK</button>
+                                        <button type="button" id="signUpButtonClear">CLEAR</button>
+                                        <button type="button" id="signUpButtonDone">CONFIRM</button>
                                     </td>
 
                                 </tr>

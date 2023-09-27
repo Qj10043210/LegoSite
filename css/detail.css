@@ -1,0 +1,170 @@
+#allbox {
+  max-width: 1440px;
+  min-width: 1440px;
+  margin: 0px auto;
+  background-color: blanchedalmond;
+  height: 960px;
+  font-family: "Black Ops One", cursive;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+}
+#allbox #detailMain {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0px auto;
+  padding: 100px 0;
+  background-color: aquamarine;
+  position: relative;
+}
+#allbox #detailMain #pleaseLogin {
+  margin: 0 auto;
+  top: 11%;
+  position: absolute;
+  background-image: url(./images/messageWelcome.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 30;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border: solid 8px black;
+  border-radius: 20px;
+  width: 450px;
+  height: 132px;
+  background-color: darkgrey;
+  display: none;
+}
+#allbox #detailMain #detailImageBox2 {
+  margin: 0 auto;
+  top: 11%;
+  position: absolute;
+  background-image: url(./images/messageWelcome.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 30;
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border: solid 8px black;
+  border-radius: 20px;
+  width: 450px;
+  height: 132px;
+  background-color: darkgrey;
+  display: none;
+}
+#allbox #detailMain #detailMainLeft {
+  width: 38%;
+  height: 800px;
+  background-color: crimson;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#allbox #detailMain #detailMainLeft #detailImageBox {
+  width: 530px;
+  height: 530px;
+  background-color: black;
+}
+#allbox #detailMain #detailMainLeft #detail3Info {
+  width: 530px;
+  height: 250px;
+  background-color: beige;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoL {
+  width: 33%;
+  height: 80%;
+  background-color: coral;
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoM {
+  width: 33%;
+  height: 80%;
+  background-color: coral;
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoR {
+  width: 33%;
+  height: 80%;
+  background-color: coral;
+}
+#allbox #detailMain #detailMainRight {
+  width: 58%;
+  background-color: blue;
+}
+#allbox #detailMain #detailMainRight ul {
+  width: 95%;
+  margin: 20px auto;
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#allbox #detailMain #detailMainRight ul li {
+  margin: 1em 0;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+#allbox #detailMain #detailMainRight ul #detailListStarsNew {
+  display: flex;
+  justify-content: space-between;
+}
+#allbox #detailMain #detailMainRight ul #detailListStarsNew #detailNew {
+  background-color: white;
+  display: block;
+}
+#allbox #detailMain #detailMainRight ul #detailListStarsNew #detailNew.unview {
+  display: none;
+}
+#allbox #detailMain #detailMainRight ul #detailListPrice::before {
+  content: "$ ";
+}
+#allbox #detailMain #detailMainRight ul #detailListButton {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonMinus {
+  width: 25px;
+  height: 25px;
+  background-color: azure;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonPlus {
+  width: 25px;
+  height: 25px;
+  background-color: azure;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonQuant {
+  border: none;
+  width: 50px;
+  height: 25px;
+  background-color: azure;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy {
+  margin-left: 50px;
+  width: 35px;
+  height: 25px;
+  background-color: azure;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+}
+#allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy.unview {
+  background-color: black;
+  opacity: 0.8;
+}
+#allbox #detailMain #detailMainBottom {
+  width: 98%;
+  background-color: darkgray;
+  margin-top: 30px;
+  padding: 25px;
+}/*# sourceMappingURL=detail.css.map */

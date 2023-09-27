@@ -21,22 +21,23 @@
     <div id="main">
        <div id="mainSlickOut">
             <div id="mainSlickIn" data-slick='{"slidesToShow": 4, "slidesToScroll": 1}'>
-            <div class="mainSlickForm"><div class="mainSlickUnder"></div><div class="mainSlickUpper"><img src="./css/images/main01.png" alt="dino"></div></div>
-            <div class="mainSlickForm"><div class="mainSlickUnder"></div><div class="mainSlickUpper"><img src="./css/images/main02.png" alt=""></div></div>
-            <div class="mainSlickForm"><div class="mainSlickUnder"></div><div class="mainSlickUpper"><img src="./css/images/main03.png" alt=""></div></div>
-            <div class="mainSlickForm"><div class="mainSlickUnder"></div><div class="mainSlickUpper"><img src="./css/images/main04.png" alt=""></div></div>
-            <div class="mainSlickForm"><div class="mainSlickUnder"></div><div class="mainSlickUpper"><img src="./css/images/main05.png" alt=""></div></div>
-            <div class="mainSlickForm"><div class="mainSlickUnder"></div><div class="mainSlickUpper"><img src="./css/images/main06.png" alt=""></div></div>
-            <div class="mainSlickForm"><div class="mainSlickUnder"></div><div class="mainSlickUpper"><img src="./css/images/main07.png" alt=""></div></div>
-            <div class="mainSlickForm"><div class="mainSlickUnder"></div><div class="mainSlickUpper"><img src="./css/images/main08.png" alt=""></div></div>
+            <div class="mainSlickForm"><div class="mainSlickUnder up01"></div><div class="mainSlickUpper"><img src="./css/images/main01.png" alt="dino"></div></div>
+            <div class="mainSlickForm"><div class="mainSlickUnder up02"></div><div class="mainSlickUpper"><img src="./css/images/main02.png" alt=""></div></div>
+            <div class="mainSlickForm"><div class="mainSlickUnder up03"></div><div class="mainSlickUpper"><img src="./css/images/main03.png" alt=""></div></div>
+            <div class="mainSlickForm"><div class="mainSlickUnder up04"></div><div class="mainSlickUpper"><img src="./css/images/main04.png" alt=""></div></div>
+            <div class="mainSlickForm"><div class="mainSlickUnder up05"></div><div class="mainSlickUpper"><img src="./css/images/main05.png" alt=""></div></div>
+            <div class="mainSlickForm"><div class="mainSlickUnder up06"></div><div class="mainSlickUpper"><img src="./css/images/main06.png" alt=""></div></div>
+            <div class="mainSlickForm"><div class="mainSlickUnder up07"></div><div class="mainSlickUpper"><img src="./css/images/main07.png" alt=""></div></div>
+            <div class="mainSlickForm"><div class="mainSlickUnder up08"></div><div class="mainSlickUpper"><img src="./css/images/main08.png" alt=""></div></div>
             </div>
+            
        </div>
         
     </div>
     
     <script>//callUp
 $('.header').load('./header.html')
-$('.nav').load('./nav.html')
+// $('.nav').load('./nav.html')
     </script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script type="module" src="./js/index.js"></script>
@@ -45,9 +46,9 @@ $('.nav').load('./nav.html')
         $(document).ready(function () {
             $('#mainSlickIn').slick({
                 accessibility : false,
-                arrows : false,
+                arrows : true,
                 customPaging : 0,
-                speed:2000,
+                speed:1000,
                 autoplay:true,
                 autoplayspeed:2000,
 

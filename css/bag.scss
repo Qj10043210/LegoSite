@@ -1,0 +1,56 @@
+#allbox {
+    max-width: 1440px;
+    min-width: 1440px;
+    margin: 0px auto;
+    background-color: blanchedalmond;
+    height: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+}
+#bagTable{
+    .bagItem{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .bagImage{
+            width: 250px;
+            height: 250px;
+            
+            img{
+                height: 100%;
+                width: auto;
+            }
+        }
+        .bagName{
+            flex-grow: 3;
+            text-align: start;
+        }
+        .bagPrice{
+            flex-grow: 1;
+            text-align: center;
+        }
+        .bagQuant{
+            flex-grow: 0.5;
+            text-align: center;
+            .bagQuantMinus{
+
+            }
+            .bagQuantPlus{
+
+            }
+            .bagQuantInput{
+                
+            }
+
+        }
+        .bagDelete{
+            flex-grow: 0.5;
+            text-align: center;
+        }
+        
+    }
+}

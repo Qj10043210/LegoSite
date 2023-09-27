@@ -8,16 +8,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-    <img src="./css/images/00.png" alt="">
+    <img src="./css/images/goodsAd.png" alt=""></img>
     <div id="aaa"></div>
     <script>
         $.get('./text/10266.txt', function(data){
 
             let a = data
-            $('#aaa').html(a)
+            $('#aaa').append(a)
 
 
         },'text');
+        let bb = 0
+        let c = bb % 4
+        console.log(c)
     </script>    
 </body>
 </html>

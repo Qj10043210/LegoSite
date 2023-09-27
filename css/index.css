@@ -1,19 +1,3 @@
-.test {
-  display: block;
-  max-width: 100%;
-  background-color: darksalmon;
-  opacity: 0.8;
-  margin: 0px 40px;
-  padding: 80px 0;
-}
-
-#yesss {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: none;
-}
-
 #allbox {
   max-width: 1440px;
   min-width: 1440px;
@@ -27,258 +11,27 @@
   font-family: "Noto Sans", sans-serif;
   font-size: 16px;
 }
-#allbox #signUp {
-  width: 1200px;
-  height: 720px;
-  background-color: white;
-  display: flex;
-  border: 10px solid #000;
-  border-radius: 30px 30px 0 0;
-}
-#allbox #signUp #signUpMinifigure {
-  position: relative;
-  width: 50%;
-  height: 100%;
-  background-color: aliceblue;
-  border-radius: 20px 0px 0px 0px;
-  border-right: 10px solid #000;
-}
-#allbox #signUp #signUpMinifigure div.head2 {
-  width: 300px;
-  height: 150px;
-  position: absolute;
-  top: calc(-10% - 10px);
-  background-color: azure;
-  left: 25%;
-  border-radius: 25px;
-  border: 10px solid #000;
-  z-index: -99;
-}
-#allbox #signUp #signUpMinifigure #minifigureHTML {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-#allbox #signUp #signUpInfobox {
-  position: relative;
-  width: 50%;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0px 20px 0px 0px;
-}
-#allbox #signUp #signUpInfobox .signUpFormHead {
-  padding-top: 30px;
-  font-family: "Black Ops One", cursive;
-  font-size: 38px;
-  font-weight: bold;
-}
-#allbox #signUp #signUpInfobox .signInFormSign {
-  padding-top: 10px;
-  margin-bottom: 60px;
-  font-size: 22px;
-  font-weight: 550;
-}
-#allbox #signUp #signUpInfobox div.head2 {
-  width: 300px;
-  height: 150px;
-  position: absolute;
-  top: calc(-10% - 10px);
-  background-color: #fff;
-  left: 25%;
-  border-radius: 25px;
-  border: 10px solid #000;
-  z-index: -99;
-}
-#allbox #signUp #signUpInfobox .signUpForm table thead .emailcheck.infoDone {
-  display: none;
-}
-#allbox #signUp #signUpInfobox .signUpForm table thead .emailcheck.infoError {
-  display: block;
-}
-#allbox #signUp #signUpInfobox .signUpForm table thead .signUpFormStatus {
-  display: flex;
-  justify-content: space-around;
-}
-#allbox #signUp #signUpInfobox .signUpForm table thead .signUpFormStatus li.infoDone {
-  display: none;
-}
-#allbox #signUp #signUpInfobox .signUpForm table thead .signUpFormStatus li.infoError {
-  display: inline-block;
-}
-#allbox #signUp #signUpInfobox .signUpForm table tbody tr {
-  width: 470px;
-  display: flex;
-  justify-content: center;
-}
-#allbox #signUp #signUpInfobox .signUpForm table tbody tr #signUpFormBirth {
-  margin-right: 73px;
-}
-#allbox #signUp #signUpInfobox .signUpForm table tbody tr td {
-  text-align: center;
-  padding-bottom: 20px;
-  font-size: 20px;
-}
-#allbox #signUp #signUpInfobox .signUpForm table tbody tr td input {
-  box-sizing: border-box;
-  display: block;
-  width: 150%;
-  border: solid 2px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
-  padding: 13px;
-  outline: 0;
-  font-size: 0.8em;
-}
-#allbox #signUp #signUpInfobox .signUpForm table tbody tr td input.infoError {
-  border: solid 2px red;
-}
-#allbox #signUp #signUpInfobox .signUpForm table tfoot td {
-  padding-top: 20px;
-  text-align: center;
-}
-#allbox #signUp #signUpInfobox .signUpForm table tfoot td button[type=button] {
-  text-decoration: none;
-  padding: 15px 25px;
-  border-radius: 4px;
-  background: rgb(253, 128, 36);
-  color: #fff;
-  font-weight: bold;
-  letter-spacing: 1px;
-  font-size: 1em;
-  text-align: center;
-  border: rgb(253, 128, 36);
-}
-#allbox #signUp #signUpInfobox .signUpForm table tfoot td button[type=button]:active {
-  background: #ddd;
-}
 
-#allbox #signInLegoHead {
-  width: 690px;
-  height: 810px;
-  margin: 30px auto;
-  background-image: url(./images/signInHead.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-}
-#allbox #signInLegoHead #signInGoHome {
-  top: 10%;
-  left: 18%;
+#main .slick-arrow {
   position: absolute;
-  width: 449px;
-  height: 132px;
-  background-color: darkgrey;
-  display: none;
+  z-index: 10;
+  width: 20px;
+  height: 20px;
+  font-size: 0px;
+  border: none;
 }
-#allbox #signInLegoHead #signInGoHome button {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-}
-#allbox #signInLegoHead #signInFace {
-  position: absolute;
-  opacity: 1;
-  width: 100%;
-  height: 100%;
-}
-#allbox #signInLegoHead #signInFace.face {
-  background-image: url(./images/signInFace.png);
-  background-repeat: no-repeat;
-  animation: 0.8s facecome;
-}
-@keyframes facecome {
-  0% {
-    background-position-x: -1014px;
-  }
-  60% {
-    background-position-x: 60px;
-  }
-  80% {
-    background-position-x: 0px;
-  }
-  80% {
-    background-position-x: -20px;
-  }
-  100% {
-    background-position-x: 0px;
-  }
-}
-#allbox #signInLegoHead #signInFace.face2 {
-  background-image: url(./images/signInAngry.png);
-  background-repeat: no-repeat;
-  animation: 0.8s facecome2;
-}
-@keyframes facecome2 {
-  0% {
-    background-position-x: 1014px;
-  }
-  60% {
-    background-position-x: -60px;
-  }
-  80% {
-    background-position-x: 0px;
-  }
-  80% {
-    background-position-x: 30px;
-  }
-  100% {
-    background-position-x: 0px;
-  }
-}
-#allbox #signInLegoHead #signInFace.face3 {
-  background-repeat: no-repeat;
-  animation: 0.8s facecome3;
-}
-@keyframes facecome3 {
-  0% {
-    background-image: url(./images/signInAngry.png);
-    background-position-x: 0px;
-  }
-  20% {
-    background-image: url(./images/signInAngry.png);
-    background-position-x: 20px;
-  }
-  30% {
-    background-image: url(./images/signInAngry.png);
-    background-position-x: 0px;
-  }
-  50% {
-    background-image: url(./images/signInAngry.png);
-    background-position-x: -60px;
-  }
-  100% {
-    background-image: url(./images/signInAngry.png);
-    background-position-x: 1014px;
-  }
-}
-#allbox #signInLegoHead #signInData {
-  position: absolute;
+#main .slick-arrow.slick-prev {
   top: 50%;
-  left: 50%;
+  left: -5%;
+  background-image: url(./images/left.png);
+  background-size: 100% 100%;
 }
-#allbox #signInLegoHead #signInData #signInErrorbox {
-  display: none;
-  width: 449px;
-  height: 132px;
-  background-image: url(./images/messageWrong.png);
-  position: absolute;
-  background-size: cover;
-  background-repeat: no-repeat;
-  top: -301%;
-  left: -126.5%;
+#main .slick-arrow.slick-next {
+  top: 50%;
+  right: -5%;
+  background-image: url(./images/right.png);
+  background-size: 100% 100%;
 }
-#allbox #signInLegoHead #signInData #signInErrorbox.show {
-  display: block;
-}
-#allbox #signInLegoHead .signInForm {
-  width: 100%;
-  height: 100%;
-  border: 1px solid #000;
-  background-color: red;
-}
-#allbox #signInLegoHead .signInForm ul li input.infoError {
-  border: red 1px solid;
-}
-
 #main #mainSlickOut {
   margin: 0px auto;
   width: 1440px;
@@ -304,13 +57,37 @@
 #main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUnder {
   width: 70%;
   height: 300px;
-  background-color: chocolate;
+}
+#main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUnder.up01 {
+  background-color: red;
+}
+#main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUnder.up02 {
+  background-color: orange;
+}
+#main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUnder.up03 {
+  background-color: yellow;
+}
+#main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUnder.up04 {
+  background-color: yellowgreen;
+}
+#main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUnder.up05 {
+  background-color: blue;
+}
+#main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUnder.up06 {
+  background-color: purple;
+}
+#main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUnder.up07 {
+  background-color: gold;
+}
+#main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUnder.up08 {
+  background-color: silver;
 }
 #main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUpper {
   width: 100%;
   position: absolute;
   display: flex;
   justify-content: center;
+  background-color: black;
 }
 #main #mainSlickOut #mainSlickIn .mainSlickForm .mainSlickUpper:nth-child(1) {
   bottom: 15%;

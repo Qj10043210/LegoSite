@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     position: relative;
+
     #header {
         width: 1440px;
         height: 100%;
@@ -13,57 +14,120 @@
         justify-content: space-between;
         align-items: center;
         padding: 0px 15px;
+
         #headerLeft {
             display: flex;
             align-items: center;
-            
-            div{
+
+            div {
                 padding-right: 50px;
             }
+
             #headerLog {
-                div{
+                div {
                     width: 55px;
                     height: 55px;
                     background-image: url(./images/header_logo.png);
                     background-position: center;
                     background-repeat: no-repeat;
                     background-size: cover;
+                    cursor: pointer;
                 }
-                span{
+
+                span {
                     display: none;
                 }
             }
 
-            #headerGoods {}
+            #headerGoods {
+                div {
+                    width: 55px;
+                    height: 55px;
+                    background-image: url(./images/header_shop.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    cursor: pointer;
+                }
 
-            #headerHelp {}
+                span {
+                    display: none;
+                }
+            }
+
+            #headerHelp {
+                div {
+                    width: 55px;
+                    height: 55px;
+                    background-image: url(./images/header_help.png);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    cursor: pointer;
+                }
+
+                span {
+                    display: none;
+                }
+            }
         }
 
         #headerRight {
             display: flex;
             align-items: center;
-            
-            div{
+
+            div {
                 padding-left: 50px;
+
             }
-            #headerSign {
+
+            #headerSignUp {
                 display: flex;
                 align-items: center;
-                div{
+
+                div {
                     padding: 0;
                     width: 30px;
                     height: 32px;
-                    background-image: url(./images/legohead2.PNG);
-                    
+                    background-image: url(./images/headerSignUp.PNG);
+
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     display: block;
                     line-height: 32px;
-                    &.loging{
+                    cursor: pointer;
+                }
+
+                span {
+                    padding-left: 3px;
+                    display: block;
+                    cursor: pointer;
+                }
+            }
+
+            #headerSign {
+                display: flex;
+                align-items: center;
+
+                div {
+                    cursor: pointer;
+                    padding: 0;
+                    width: 30px;
+                    height: 32px;
+                    background-image: url(./images/legohead2.PNG);
+
+                    background-repeat: no-repeat;
+                    background-size: 100% 100%;
+                    display: block;
+                    line-height: 32px;
+
+                    &.loging {
                         background-image: url(./images/legohead.PNG);
                     }
                 }
-                span{
+
+                span {
+                    cursor: pointer;
                     padding-left: 3px;
                     display: block;
                 }
@@ -72,48 +136,95 @@
             #headerShoplist {
                 display: flex;
                 align-items: center;
-                div{
+
+                div {
+                    cursor: pointer;
                     padding: 0;
                     width: 30px;
                     height: 32px;
                     background-image: url(./images/legobag.PNG);
-                    
+
                     background-repeat: no-repeat;
                     background-size: 100% 100%;
                     display: block;
                     line-height: 32px;
                 }
-                span{
-                    
+
+                span {
+
                     display: none;
                 }
             }
 
             #headerPersonal {
-                span{
+                span {
+                    cursor: pointer;
                     display: block;
-                &.unview{
-                    display: none;
+
+                    &.unview {
+                        display: none;
+                    }
                 }
-                }
-                
+
             }
         }
 
     }
-    #headerMessageBox{
 
+    #headerMessageBox {
+        background-image: url(./images/messageSignOut.png);
         display: flex;
-        width: 449px;
+        width: 450px;
         height: 132px;
         position: absolute;
-        background-color: red;
-        top:50px;
+        top: 50px;
         justify-content: center;
         align-items: end;
         z-index: 50;
-        &.unview{
+        box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+        border: solid 8px black;
+        border-radius: 20px;
+        background-color: darkgrey;
+
+        &.unview {
             display: none;
         }
+
+        button[type=button] {
+            text-decoration: none;
+            padding: 4px 15px;
+            margin-left: 20px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1.3em;
+            text-align: center;
+            border: rgba(253, 128, 36, 0);
+            cursor: pointer;
+
+            &:hover {
+                color: #000;
+            }
+
+            &:nth-child(1) {
+                background-color: rgb(255, 0, 0);
+                margin-left: 60px;
+
+                &:active {
+                    background-color: #ddd;
+                }
+            }
+
+            &:nth-child(2) {
+                background-color: rgb(2, 108, 185);
+
+                &:active {
+                    background-color: #ddd;
+                }
+            }
+
+        }
+
     }
 }

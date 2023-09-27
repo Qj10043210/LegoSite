@@ -713,7 +713,7 @@
             "lessgoTheme": "9",
             "lessgoName": "Jim Lee Batman™ Collection",
             "lessgoPrice": "119.99",
-            "lessgoRate": "5",
+            "lessgoRate": "1",
             "lessgoPiece": "4167",
             "lessgoMan": "0",
             "lessgoAge": "18",
@@ -735,9 +735,9 @@
         {
             "lessgoIndex": "41803",
             "lessgoTheme": "10",
-            "lessgoName": "Extra DOTS Series 8 – Glitter and Shine",
+            "lessgoName": "Extra DOTS Series 8  Glitter and Shine",
             "lessgoPrice": "3.99",
-            "lessgoRate": "5",
+            "lessgoRate": "1.5",
             "lessgoPiece": "115",
             "lessgoMan": "0",
             "lessgoAge": "6",
@@ -868,31 +868,31 @@
     "lessgoNav": [
         {
             "lessgoTheme": "0",
-            "lsessgoIndex": "40554"
+            "lsessgoIndex": "21166"
         },
         {
             "lessgoTheme": "1",
-            "lsessgoIndex": "76259"
+            "lsessgoIndex": "21318"
         },
         {
             "lessgoTheme": "2",
-            "lsessgoIndex": "76943"
+            "lsessgoIndex": "45018"
         },
         {
             "lessgoTheme": "3",
-            "lsessgoIndex": "5005509"
+            "lsessgoIndex": "71469"
         },
         {
             "lessgoTheme": "4",
-            "lsessgoIndex": "41801"
+            "lsessgoIndex": "10276"
         },
         {
             "lessgoTheme": "5",
-            "lsessgoIndex": "31206"
+            "lsessgoIndex": "31136"
         },
         {
             "lessgoTheme": "6",
-            "lsessgoIndex": "5007469"
+            "lsessgoIndex": "11032"
         },
         {
             "lessgoTheme": "7",
@@ -900,31 +900,93 @@
         },
         {
             "lessgoTheme": "8",
-            "lsessgoIndex": "11032"
+            "lsessgoIndex": "5007469"
         },
         {
             "lessgoTheme": "9",
-            "lsessgoIndex": "31136"
+            "lsessgoIndex": "31206"
         },
         {
             "lessgoTheme": "10",
-            "lsessgoIndex": "10276"
+            "lsessgoIndex": "41801"
         },
         {
             "lessgoTheme": "11",
-            "lsessgoIndex": "71469"
+            "lsessgoIndex": "5005509"
         },
         {
             "lessgoTheme": "12",
-            "lsessgoIndex": "45018"
+            "lsessgoIndex": "76943"
         },
         {
             "lessgoTheme": "13",
-            "lsessgoIndex": "21318"
+            "lsessgoIndex": "76259"
         },
         {
             "lessgoTheme": "14",
-            "lsessgoIndex": "21166"
+            "lsessgoIndex": "40554"
         }
-    ]
+    ],
+    "lessgoThemes" : [
+        {
+          "themeIndex": "0",
+          "fullName": "Minecraft Toys and Gifts"
+        },
+        {
+          "themeIndex": "1",
+          "fullName": "Ideas"
+        },
+        {
+          "themeIndex": "2",
+          "fullName": "Education Toys "
+        },
+        {
+          "themeIndex": "3",
+          "fullName": "DREAMZzz™"
+        },
+        {
+          "themeIndex": "4",
+          "fullName": "Creator Expert Toys "
+        },
+        {
+          "themeIndex": "5",
+          "fullName": "Creator 3in1 Toys"
+        },
+        {
+          "themeIndex": "6",
+          "fullName": "Classic Brick Sets"
+        },
+        {
+          "themeIndex": "7",
+          "fullName": "BrickHeadz™"
+        },
+        {
+          "themeIndex": "8",
+          "fullName": "Books for Children - Adults"
+        },
+        {
+          "themeIndex": "9",
+          "fullName": "Art Sets and Wall Art Toys "
+        },
+        {
+          "themeIndex": "10",
+          "fullName": "Accessories"
+        },
+        {
+          "themeIndex": "11",
+          "fullName": "Kids Backpacks"
+        },
+        {
+          "themeIndex": "12",
+          "fullName": "Jurassic World"
+        },
+        {
+          "themeIndex": "13",
+          "fullName": "Batman™"
+        },
+        {
+          "themeIndex": "14",
+          "fullName": "Avatar Toys"
+        }
+      ]
 }

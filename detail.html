@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/detail.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+        integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <div class="header"></div>
+    <div id="allbox">
+        <div id="detailMain">
+            <div id="pleaseLogin">
+                please Sign-In First
+            </div>
+            <div id="detailImageBox2">
+                <p>The item added to your bag</p>
+                <button type="button" id="detailImageBox2View">VIEW BAG</button>
+                <button type="button" id="detailImageBox2Keep">CLOSE</button>
+            </div>
+            <div id="detailMainLeft">
+                <div id="detailImageBox"></div>
+
+                <div id="detail3Info">
+                    <div id="detailInfoL"></div>
+                    <div id="detailInfoM"></div>
+                    <div id="detailInfoR"></div>
+                </div>
+            </div>
+            <div id="detailMainRight">
+                <ul>
+                    <li id="detailListStarsNew">
+                        <div id="detailStars">
+
+                        </div>
+                        <div id="detailNew" class="univew">New</div>
+                    </li>
+                    <li id="detailListIndex">
+                        </li#>
+                    <li id="detailListName"></li>
+                    <li id="detailListPrice"></li>
+                    <li id="detailListTheme"></li>
+                    <li id="detailListButton">
+                        <div id="detailListButtonMinus">-</div>
+                        <input type="text" name="detailListButtonQuant" id="detailListButtonQuant" value="1" onkeypress="return isNumber(event)">
+                        <div id="detailListButtonPlus">+</div>
+                        <div id="detailListButtonBuy">buy</div>
+                    </li>
+                </ul>
+            </div>
+            <div id="detailMainBottom">
+
+            </div>
+        </div>
+    </div>
+    <script>$('.header').load('./header.html')</script>
+
+    <script type="module" src="./js/index.js"></script>
+    <script>
+        let detailItem = JSON.parse(sessionStorage.getItem("Items"))
+        console.log(detailItem)
+        document.title = detailItem.lessgoName;
+        let detailimage = `<img src="https://github.com/jillina1004/imagebox/blob/main/${detailItem.lessgoIndex}.png?raw=true" alt="${detailItem.lessgoIndex}"></img>`
+        $('#detailImageBox').append(detailimage)
+        $('#detailInfoL').append(detailItem.lessgoPiece)
+        $('#detailInfoM').append(detailItem.lessgoAge)
+        $('#detailInfoR').append(detailItem.lessgoMan)
+        $('#detailListIndex').append(detailItem.lessgoIndex)
+        $('#detailListName').append(detailItem.lessgoName)
+        $('#detailListPrice').append(detailItem.lessgoPrice)
+        $('#detailListTheme').append(detailItem.lessgoTheme)
+        let rateStar = detailItem.lessgoRate * 10
+        let rateStar2 = rateStar % 10;
+        let rateStar3 = 0;
+        if (rateStar != 0) {
+            if (rateStar2 == 0) {
+                rateStar3 = 50 - rateStar
+                for (let i = 0; i < rateStar; i += 10) {
+                    $('#detailStars').append(`<img src="./css/images/star2.png" alt="">`)
+                }
+                for (let i = 0; i < rateStar3; i += 10) {
+                    $('#detailStars').append(`<img src="./css/images/star0.png" alt="">`)
+                }
+            }
+            else {
+                rateStar3 = 45 - rateStar
+                for (let i = 0; i < rateStar - 5; i += 10) {
+                    $('#detailStars').append(`<img src="./css/images/star2.png" alt="">`)
+                }
+                $('#detailStars').append(`<img src="./css/images/star1.png" alt="">`)
+                for (let i = 0; i < rateStar3; i += 10) {
+                    $('#detailStars').append(`<img src="./css/images/star0.png" alt="">`)
+                }
+            }
+        }
+        else {
+            $('#detailStars').append(`<img src="./css/images/star0.png" alt="">`)
+            $('#detailStars').append(`<img src="./css/images/star0.png" alt="">`)
+            $('#detailStars').append(`<img src="./css/images/star0.png" alt="">`)
+            $('#detailStars').append(`<img src="./css/images/star0.png" alt="">`)
+            $('#detailStars').append(`<img src="./css/images/star0.png" alt="">`)
+        }
+        if (detailItem.lessgoNew == 1) {
+            $('#detailNew').removeClass("unview")
+        }
+        else {
+            $('#detailNew').addClass("unview")
+        }
+        let buying = true;
+        if (detailItem.lessgoBuy == false) {
+            buying = false;
+            $('#detailListButtonBuy').addClass("unview")
+        }
+        else {
+            buying = true;
+            $('#detailListButtonBuy').removeClass("unview")
+        }
+        $.get(`./text/${detailItem.lessgoIndex}.txt`, function (data) {
+
+            let a = data
+            $('#detailMainBottom').append(a)
+
+
+        }, 'text');
+
+        $(document).on("click", '#detailListButtonMinus', function () {
+            if ($("#detailListButtonQuant").val() != 0) {
+                let temp = $("#detailListButtonQuant").val();
+                temp--;
+                $("#detailListButtonQuant").val(temp)
+            }
+        })
+        $(document).on("click", '#detailListButtonPlus', function () {
+
+            let temp = $("#detailListButtonQuant").val();
+            temp++;
+            $("#detailListButtonQuant").val(temp)
+
+        })
+
+        $(document).on("click", '#detailListButtonBuy', function () {
+            if (buying) {
+                if ($("#detailListButtonQuant").val() > 0) {
+                    let logs = sessionStorage.getItem("log")
+                    if (logs == 11) {
+                        $('#pleaseLogin').delay(800).fadeIn()
+
+                    }
+                    else {
+                        let temp = {
+                            lessgoIndex: detailItem.lessgoIndex,
+                            lessgoName: detailItem.lessgoName,
+                            lessgoPrice: detailItem.lessgoPrice,
+                            lessgoQuant: $("#detailListButtonQuant").val()
+                        }
+                        let tempBox = JSON.parse(sessionStorage.getItem("buys")) || [];
+                        tempBox.push(temp)
+                        sessionStorage.setItem("buys", JSON.stringify(tempBox))
+                        $('#detailImageBox2').delay(800).fadeIn()
+                    }
+                }
+                else {
+                    //수량 0
+                }
+            }
+            else {
+                //구매 불가능 상품
+            }
+        })
+        $(document).on("click", '#pleaseLogin', function () {
+            $('#pleaseLogin').delay(200).fadeOut()
+        })
+        $(document).on("click", '#detailImageBox2Keep', function () {
+            $('#detailImageBox2').delay(100).fadeOut()
+        })
+        $(document).on("click", '#detailImageBox2View', function () {
+            $('#detailImageBox2').delay(10).fadeOut()
+            location.href = './bag.html'
+        })
+
+
+    </script>
+    <script>
+        function isNumber(evt) { //<input type="text" onkeypress="return isNumber(event)>
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+        $('#detailListButtonQuant').bind('keyup blur', function () {
+    $(this).val($(this).val().replace(/[^0-9]/g, ''))
+});
+    </script>
+</body>
+
+</html>

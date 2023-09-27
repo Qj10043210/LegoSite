@@ -1,21 +1,5 @@
-//Test Area ☆☆☆☆☆☆☆☆☆☆☆☆//
-.test {
-    display: block;
-    max-width: 100%;
-    background-color: darksalmon;
-    opacity: 0.8;
-    margin: 0px 40px;
-    padding: 80px 0;
-}
 
-//★★★★★★★★★★★★ Test Area //
-//signUpArea ☆☆☆☆☆☆☆☆☆☆☆☆//
-#yesss{
-    position: absolute;
-    top: 10px;
-    left:10px;
-    display: none;
-}
+//Index ☆☆☆☆☆☆☆☆☆☆☆☆//
 #allbox {
     max-width: 1440px;
     min-width: 1440px;
@@ -28,320 +12,31 @@
     font-family: 'Black Ops One', cursive;
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
-    
-    #signUp {
-        width: 1200px;
-        height: 720px;
-        background-color: white;
-        display: flex;
-        border: 10px solid #000;
-        border-radius:  30px 30px 0 0;
-
-        #signUpMinifigure {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            background-color: aliceblue;
-            border-radius: 20px 0px 0px 0px;
-            border-right: 10px solid #000;
-
-            div.head2 {
-                width: 300px;
-                height: 150px;
-                position: absolute;
-                top: calc(-10% - 10px);
-                background-color: azure;
-                left: 25%;
-                border-radius: 25px;
-                border: 10px solid #000;
-                z-index: -99;
-                
-            }
-
-            #minifigureHTML {
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        }
-
-        #signUpInfobox {
-            position: relative;
-            width: 50%;
-            height: 100%;
-            background-color: rgb(255, 255, 255);
-            border-radius: 0px 20px 0px 0px;
-
-            .signUpFormHead {
-                padding-top: 30px;
-                font-family: 'Black Ops One', cursive;
-                font-size: 38px;
-                font-weight: bold;
-            }
-
-            .signInFormSign {
-                padding-top: 10px;
-                margin-bottom: 60px;
-                font-size: 22px;
-                font-weight: 550;
-            }
-
-            div.head2 {
-                width: 300px;
-                height: 150px;
-                position: absolute;
-                top: calc(-10% - 10px);
-                background-color: #fff;
-                left: 25%;
-                border-radius: 25px;
-                border: 10px solid #000;
-                z-index: -99;
-            }
-
-            .signUpForm {
-                table {
-                    
-                    thead {
-                        .emailcheck {
-                            &.infoDone {
-                                display: none;
-                            }
-
-                            &.infoError {
-                                display: block;
-                            }
-                        }
-
-                        .signUpFormStatus {
-                            display: flex;
-                            justify-content: space-around;
-
-                            li {
-
-                                &.infoDone {
-                                    display: none;
-                                }
-
-                                &.infoError {
-                                    display: inline-block;
-                                }
-                            }
-                        }
-                    }
-
-                    tbody {
-                        
-                        tr {
-                            width: 470px; 
-                            display: flex;
-                            justify-content: center;
-                            #signUpFormBirth{
-                                margin-right:73px ;
-                            }
-                            td {
-                                text-align: center;
-                                padding-bottom: 20px;
-                                    font-size: 20px;
-                                input { 
-                                    box-sizing: border-box;
-                                    display: block;
-                                    width: 150%;
-                                    border: solid 2px rgba(0, 0, 0, 0.3);
-                                    border-radius: 5px;
-                                    padding: 13px;
-                                    outline: 0;
-                                    font-size: 0.8em;
-
-                                    &.infoError {
-                                        border: solid 2px red;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                    tfoot {
-                        td {padding-top: 20px;
-                            text-align: center;
-                            button[type=button]{
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 4px;
-    background: rgb(253,128,36);
-    color: #fff;
-    font-weight: bold;
-    letter-spacing: 1px;
-    font-size: 1em;
-    text-align: center;
-    border: rgb(253,128,36);
-    &:active {
-        background: #ddd;
-    }
-                            }
-                            
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
-
-//★★★★★★★★★★★★ signUpArea //
-
-//signInArea ☆☆☆☆☆☆☆☆☆☆☆☆//
-#allbox {
-
-    //signUp의 allbox와 속성 공유//
-    #signInLegoHead {
-        width: 690px;
-        height: 810px;
-        margin: 30px auto;
-        background-image: url(./images/signInHead.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        
-        #signInGoHome{
-            top: 10%;
-            left:18%;
-            position: absolute;
-            
-            
-            width: 449px;
-            height: 132px;
-            background-color: darkgrey;
-            display: none;
-            button{
-                position: absolute;
-                bottom: 0;
-                left:50%;
-            }
-            
-        }
-
-        #signInFace {
-            position: absolute;
-            opacity: 1;
-            width: 100%;
-            height: 100%;
-            // background-image: url(./images/signInFace.png);
-            &.face {
-                background-image: url(./images/signInFace.png);
-                background-repeat: no-repeat;
-                animation: 0.8s facecome;
-                @keyframes facecome{
-                    0% {background-position-x: -1014px;
-                    }
-                    60%{
-                        background-position-x: 60px;
-                    }
-                    80%{
-                        background-position-x: 0px;
-                    }
-                    80%{
-                        background-position-x: -20px;
-                    }
-                    100%{
-                        background-position-x: 0px;
-                    }
-                    
-                } 
-            } 
-            &.face2 {
-                background-image: url(./images/signInAngry.png);
-                background-repeat: no-repeat;
-                animation: 0.8s facecome2;
-                @keyframes facecome2{
-                    0% {background-position-x: +1014px;
-                    }
-                    60%{
-                        background-position-x: -60px;
-                    }
-                    80%{
-                        background-position-x: 0px;
-                    }
-                    80%{
-                        background-position-x: +30px;
-                    }
-                    100%{
-                        background-position-x: 0px;
-                    }
-                    
-                } 
-            } 
-            &.face3 {
-                
-                
-                background-repeat: no-repeat;
-                animation: 0.8s facecome3;
-                @keyframes facecome3{
-                    0% {background-image: url(./images/signInAngry.png);
-                        background-position-x: 0px;
-                    }
-                    20%{background-image: url(./images/signInAngry.png);
-                        background-position-x: 20px;
-                    }
-                    30%{background-image: url(./images/signInAngry.png);
-                        background-position-x: 0px;
-                    }
-                    50%{background-image: url(./images/signInAngry.png);
-                        background-position-x: -60px;
-                    }
-                    100%{background-image: url(./images/signInAngry.png);
-                        
-                        background-position-x: +1014px;
-                        
-                    }
-                    
-                } 
-            } 
-        }
-        #signInData{
-            position: absolute;
-            top:50%;
-            left:50%;
-
-            #signInErrorbox{
-                display: none;
-                width: 449px;
-                height: 132px;
-                background-image: url(./images/messageWrong.png);
-                position: absolute;
-                background-size: cover;
-                background-repeat: no-repeat;
-                top: -301%;
-                left:-126.5%;
-                &.show{
-                    display: block;
-                }
-            }
-        }
-        .signInForm{
-            width: 100%;
-            height: 100%;
-            border: 1px solid #000;
-            background-color: red;
-            
-            
-            ul{
-                li{
-                    input{
-                        &.infoError{
-                            border: red 1px solid;
-                        }
-                    }
-                }
-            }
-        }
-
-    }
-
-}
-
-//★★★★★★★★★★★★ signInArea //
-//Index ☆☆☆☆☆☆☆☆☆☆☆☆//
 #main {
+    .slick-arrow {
+        position: absolute;
+        z-index: 10;
+        width: 20px;
+        height: 20px;
+        font-size: 0px;
+        border: none;
+        &.slick-prev{
+            // background-color: red;
+            top: 50%;
+            left:-5%;
+            background-image: url(./images/left.png);
+            background-size: 100% 100%;
+            
+        }
+        &.slick-next{
+            // background-color: red;
+            top: 50%;
+            right:-5%;
+            background-image: url(./images/right.png);
+            background-size: 100% 100%;
+        }
+    }
     #mainSlickOut {
         margin: 0px auto;
         width: 1440px;
@@ -363,11 +58,35 @@
                 align-items: end;
                 justify-content: center;
                 position: relative;
-
+                
                 .mainSlickUnder {
                     width: 70%;
                     height: 300px;
-                    background-color: chocolate;
+                    // background-color: chocolate;
+                   &.up01{
+                    background-color: red;
+                   }
+                   &.up02{
+                    background-color: orange;
+                   }
+                   &.up03{
+                    background-color: yellow;
+                   }
+                   &.up04{
+                    background-color: yellowgreen;
+                   }
+                   &.up05{
+                    background-color: blue;
+                   }
+                   &.up06{
+                    background-color: purple;
+                   }
+                   &.up07{
+                    background-color: gold;
+                   }
+                   &.up08{
+                    background-color: silver;
+                   }
                 }
 
                 .mainSlickUpper {
@@ -375,6 +94,7 @@
                     position: absolute;
                     display:flex;
                     justify-content: center;
+                    background-color: black;
                     &:nth-child(1) {
                         bottom: 15%;
                     }
@@ -412,9 +132,7 @@
                     img {
                         width: 70%;
                         transition: all 0.4s;
-                        // &:hover{
-                        //     width: 100%;
-                        // }
+                        
                     }
                 }
             }
