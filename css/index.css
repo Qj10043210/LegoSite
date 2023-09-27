@@ -31,6 +31,7 @@
   border: none;
   background-color: white;
   filter: none;
+  cursor: pointer;
 }
 #main .slick-arrow.slick-prev {
   top: 35%;
@@ -293,6 +294,9 @@
   padding-top: 50px;
   padding-left: 20px;
 }
+#main .helpBox .helpBoxMiddle .socials li p {
+  cursor: help;
+}
 #main .helpBox .helpBoxMiddle .socials .icon {
   display: inline-flex;
   margin-right: 20px;
@@ -319,4 +323,12 @@
 }
 #main .helpBox .helpBoxNull {
   flex-grow: 1;
+}
+
+.mainSlickUnder {
+  cursor: pointer;
+}
+
+.mainSlickUpper {
+  cursor: pointer;
 }/*# sourceMappingURL=index.css.map */

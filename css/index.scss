@@ -35,6 +35,7 @@
         border: none;
         background-color: white;
         filter: none;
+        cursor: pointer;
         &.slick-prev{
             // background-color: red;
             top: 35%;
@@ -367,6 +368,8 @@
                 li {
                     padding-top: 50px;
                     padding-left: 20px;
+                    
+                    p{cursor: help;}
                 }
 
                 .icon{
@@ -399,5 +402,11 @@
             flex-grow: 1;
         }
     }
+}
+.mainSlickUnder{
+    cursor: pointer;
+}
+.mainSlickUpper{
+    cursor: pointer;
 }
     //★★★★★★★★★★★★ Index //
