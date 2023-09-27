@@ -118,7 +118,10 @@
                 background: radial-gradient(circle, rgba(255, 255, 255, 1) 61%, rgba(0, 0, 0, 0.05926120448179273) 100%);
 
                 img {
-                    width: fit-content;
+                    max-width: 755px;
+                    max-height: 750px;
+                    width: auto;
+                    height: auto;
                     transform: scale(90%);
                     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.7));
 

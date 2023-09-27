@@ -131,8 +131,11 @@
   align-items: center;
 }
 #bagTable .bagItem .bagImage img {
-  height: -moz-fit-content;
-  height: fit-content;
+  max-width: 250px;
+  max-height: 250px;
+  height: auto;
+  width: auto;
+  transform: scale(95%);
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.2));
 }
 #bagTable .bagItem .bagName {

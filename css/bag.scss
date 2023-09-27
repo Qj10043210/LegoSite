@@ -145,7 +145,11 @@
             justify-content: center;
             align-items: center;
             img{
-                height:fit-content;
+                max-width: 250px;
+                max-height: 250px;
+                height:auto;
+                width: auto;
+                transform: scale(95%);
                 filter: drop-shadow(5px 5px 5px  rgba(0,0,0,0.2));
             }
         }

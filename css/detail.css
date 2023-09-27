@@ -100,8 +100,10 @@
   background: radial-gradient(circle, rgb(255, 255, 255) 61%, rgba(0, 0, 0, 0.0592612045) 100%);
 }
 #allbox #detailMain #detailMainLeft #detailImageBox img {
-  width: -moz-fit-content;
-  width: fit-content;
+  max-width: 755px;
+  max-height: 750px;
+  width: auto;
+  height: auto;
   transform: scale(90%);
   filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.7));
 }
