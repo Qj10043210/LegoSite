@@ -39,40 +39,42 @@
     </script>
     <script type="module" src="./js/index.js"></script>
     <script>
-        function new_box(){let whatYouBuy = JSON.parse(sessionStorage.getItem("buys"))
-        console.log(whatYouBuy)
+        function new_box() {
+            let whatYouBuy = JSON.parse(sessionStorage.getItem("buys"))
+            console.log(whatYouBuy)
 
-        if (whatYouBuy) {
-            $('#bagNoItems').removeClass('view')
-            $('#bagTable *').remove()
-            whatYouBuy.forEach((element, index) => {
-                let tempBox = ''
-                tempBox += `<tr class="bagItem el{}">`
-                tempBox += `<td class="bagImage">`
-                tempBox += `<img src="https://github.com/jillina1004/imagebox/blob/main/${element.lessgoIndex}.png?raw=true" alt="${element.lessgoIndex}">`
-                tempBox += `</td>`
-                tempBox += `<td class="bagName">${element.lessgoName}</td>`
-                tempBox += `<td class="bagPrice">${element.lessgoPrice}</td>`
-                tempBox += `<td class="bagQuant">
-                    <div class="bagQuantMinus">-</div>
+            if (whatYouBuy) {
+                $('#bagNoItems').removeClass('view')
+                $('#bagTable *').remove()
+                whatYouBuy.forEach((element, index) => {
+                    let tempBox = ''
+                    tempBox += `<tr class="bagItem el{}">`
+                    tempBox += `<td class="bagImage">`
+                    tempBox += `<img src="https://github.com/jillina1004/imagebox/blob/main/${element.lessgoIndex}.png?raw=true" alt="${element.lessgoIndex}">`
+                    tempBox += `</td>`
+                    tempBox += `<td class="bagName">${element.lessgoName}</td>`
+                    tempBox += `<td class="bagPrice"><span class="howareyou">${element.lessgoPrice}</span><span class="howdareyou">${element.lessgoPrice}</span></td>`
+                    tempBox += `<td class="bagQuant">
+                    <div class="bagQuantMinus"></div>
                     <input onkeypress="return isNumber(event)" type="text" name="bagQuantInput" id="bagQuantInput${index}"
                         class="bagQuantInput" value="${element.lessgoQuant}">
-                    <div class="bagQuantPlus">+</div>
+                    <div class="bagQuantPlus"></div>
                 </td>`
-                tempBox += `<td class="bagDelete">DElETe</td>
+                    tempBox += `<td class="bagDelete">DELETE</td>
             </tr>`
-                
-                $('#bagTable').append(tempBox)
-            });
-            if(whatYouBuy.length==0){
+
+                    $('#bagTable').append(tempBox)
+                });
+                if (whatYouBuy.length == 0) {
+                    $('#bagTable *').remove()
+                    $('#bagNoItems').addClass('view')
+                }
+            } else {
                 $('#bagTable *').remove()
-            $('#bagNoItems').addClass('view')
+                $('#bagNoItems').addClass('view')
+
             }
-        } else {
-            $('#bagTable *').remove()
-            $('#bagNoItems').addClass('view')
-            
-        }}
+        }
         new_box();
     </script>
     <script>
@@ -83,6 +85,7 @@
                 $(this).next().val(q)
             }
         })
+
         $(document).on("click", ".bagQuantPlus", function () {
             let q = $(this).prev().val()
             q++;
@@ -105,6 +108,33 @@
         $(document).on("click", ".bagMessageBoxNo", function () {
             w = 0;
             $('#bagMessageBox').addClass('unview')
+        })
+        $('.bagQuantInput').bind('mousewheel', function (e) {
+            let a = $(this).val()
+            if (e.originalEvent.wheelDelta / 120 > 0) {
+                a ++;
+                let b = $(document).scrollTop()
+                console.log(b)
+                window.scrollTo(0,b)
+                console.log(b)
+                $(this).val(a)
+            }
+            else {
+                a--;
+                $(this).val(a)
+            }
+        });
+        $(document).on("input", ".bagQuantInput", function () {
+            let a = $(this).val()
+            if (a == 0) {
+                $(this).val(1)
+            }
+            else {
+                let b = $(this).parent().prev().children(".howdareyou").text()
+                console.log(b)
+                let c = parseInt(a) * parseFloat(b)
+                $(this).parent().prev().children(".howareyou").text(c.toFixed(2))
+            }
         })
     </script>
     <script>

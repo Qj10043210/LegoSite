@@ -47,7 +47,7 @@ function checkingValueInfobox() {
         else {
             $(this).removeClass("infoError")
             $(this).addClass("infoDone")
-            console.log(index)
+            
 
             falseBox[index] = true
             $(`.signInForm li:eq(${index})`).removeClass("infoError")
@@ -56,10 +56,10 @@ function checkingValueInfobox() {
 
 
     })
-    console.log(falseBox)
+    
 }
 function checkingValueTwo() {
-    console.log(falseBox)
+    
     if (falseBox[0] && falseBox[1]) {
         $('.signInMessage').text("")
         $('.signInMessage').text("Welcome!")
@@ -89,20 +89,22 @@ function getSource(){
         idss.push(ids)
     });
     
-    
+    console.log(idss)
     
 }
 function checkSource(){
     let simple = 0;
-    idss.forEach((value, index)=>{
-        if((value.id == yesme.id)&&(value.password==yesme.password)){
-            simple=1;
-        }
-        else{
-            simple--;
-        }
-    })
-    if(simple>0){
+    // idss.forEach((value, index)=>{
+    //     if((value.id == yesme.id)&&(value.password==yesme.password)){
+    //         simple=1;
+    //     }
+    //     else{
+    //         simple--;
+    //     }
+    // })
+    let simples = idss.filter((val)=>val.id==yesme.id)
+    
+    if(simples.length>0){
         orderRemove()
         $('#signInGoHome').delay(800).fadeIn()
         logsignin=22
@@ -112,9 +114,14 @@ function checkSource(){
         sessionStorage.setItem("logname", JSON.stringify(logsName))
         $('#headerSign span').text("SIGN-OUT")
         $('#headerSign div').addClass("loging")
-
+        yesme = {}
+        cart = []
+        simples = []
     }
     else{
+        yesme = {}
+        cart = []
+        simples =[]
         orderError()
     }
     

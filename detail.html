@@ -154,9 +154,10 @@
                 $("#detailListButtonQuant").val(temp)
                 
             }
+           
         })
         $(document).on("click", '#detailListButtonPlus', function () {
-            if ($("#detailListButtonQuant").val() > 1){
+            if ($("#detailListButtonQuant").val() >= 1){
                 let temp = $("#detailListButtonQuant").val();
             temp++;
             $("#detailListButtonQuant").val(temp)}
