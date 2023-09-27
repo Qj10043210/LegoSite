@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
         integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap"
         rel="stylesheet">
+        
 </head>
 
 <body>
@@ -101,10 +102,11 @@
             <div class="helpBoxMiddle">
                 <h3>Hey! How can we help you?</h3>
                 <ul class="socials">
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><p class="icon"><i class="fa-solid fa-phone"></i></p><p class="name">Contact Us</p></li>
+                    <li><p class="icon"><i class="fa-solid fa-box"></i></p><p class="name">Order Status</p></p></li>
+                    <li><p class="icon"><i class="fa-solid fa-truck-fast"></i></p><p class="name">Deliveries</p></p></li>
+                    <li><p class="icon"><i class="fa-solid fa-file-circle-question"></i></p><p class="name">Missing Bricks</p></p></li>
+                    <li><p class="icon"><i class="fa-solid fa-clipboard"></i></p><p class="name">Instructions</p></p></li>
                 </ul>
             </div>
             <div class="helpBoxNull"></div>
@@ -147,6 +149,7 @@
         let q = $('#mainSlickOut').height() + parseInt($('.helpBox').css("height"))
         q = q -120 + 'px'
         let w = $('#mainSlickOut').height()
+        w = w+ 50
         $('.helpBox').css("top", w)
         $('#main').css("height", q)
         $('.footer').css({

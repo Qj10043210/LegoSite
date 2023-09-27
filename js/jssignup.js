@@ -136,6 +136,10 @@ function takeShot() {
         infoList.push(infoes);
         localStorage.setItem("signupdata", JSON.stringify(infoList))
             console.log("sdfas")
+            sessionStorage.removeItem("logname")
+            let loghead=11;
+            sessionStorage.setItem("log", JSON.stringify(loghead))
+            location.reload()
             location.href='./signin.html'
     }).catch(function (error) {
         console.error('oops, something went wrong!', error);
