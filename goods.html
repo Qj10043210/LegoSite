@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,28 +9,85 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/header.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./css/goods.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+        integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
+
 <body>
-    <style>
-        #goodsAll{
-            width: 100%;
-            height: 100%;
-        }
-        #goodsNavi{
-            width: 100%;
-            height: 30%;
-            background-color: red;
-        }
-    </style>
+    
     <div class="header"></div>
     <div id="allbox">
-        <div id="goodsAll">
-            <div id="goodsNavi"></div>
-            <div id="goodsshowing"></div>
+        
+        <div id="goodsNav">
+            <div id="goodsNavLeft"></div>
+            <div id="goodsNavRight"></div>
+            <div class="goodsNavEl"><img src="" alt=""></div>
+            <div class="goodsNavEl"><img src="" alt=""></div>
+            <div class="goodsNavEl"><img src="" alt=""></div>
+            <div class="goodsNavEl"><img src="" alt=""></div>
+            <div class="goodsNavEl"><img src="" alt=""></div>
+            <div class="goodsNavEl"><img src="" alt=""></div>
+            <div class="goodsNavEl"><img src="" alt=""></div>
+            <div class="goodsNavEl"><img src="" alt=""></div>
+            <div class="goodsNavEl"><img src="" alt=""></div>
+            <div class="goodsNavEl unview"><img src="" alt=""></div>
+            <div class="goodsNavEl unview"><img src="" alt=""></div>
+            <div class="goodsNavEl unview"><img src="" alt=""></div>
+            <div class="goodsNavEl unview"><img src="" alt=""></div>
+            <div class="goodsNavEl unview"><img src="" alt=""></div>
+            <div class="goodsNavEl unview"><img src="" alt=""></div>
+            <div id="goodsNavShowing"></div>
         </div>
+        <div id="goodsshowing"></div>
+       
     </div>
     <script>$('.header').load('./header.html')</script>
-    <script type="module" src="./js/jsgoods.js"></script>
+
+    <script type="module" src="./js/index.js"></script>
+    
+    <script>
+        
+    </script>
+    <script>
+        let goodsData = "";
+        $.ajax({
+            type: 'GET',
+            url: './js/data.json',
+            dataType: 'json',
+            success: function (gdata) {
+                // console.log(gdata.lessgoNav)
+                goodsData = gdata.lessgoNav
+                usedata(0)
+            },
+            error: function (xhr) {
+                alert(xhr.status + "/" + xhr.errorText)
+            }
+        })
+
+    </script>
+    <!-- <script>
+        function usedata(theme) {
+            let newdata = goodsData.filter(value => value.lessgoTheme == theme)
+            console.log(newdata)
+            for(let i =0; i<goodsData.length; i++){
+                let a = "https://github.com/jillina1004/imagebox/blob/main/";
+                let b = goodsData[i].lsessgoIndex;
+                let e = '' + b;
+                let c = ".png?raw=true";
+                let indexImage = a+e+c
+                console.log(indexImage)
+                $('#goodsSlickIn').children().eq(i).children().eq(1).children().attr("src",indexImage)
+                
+            }
+            
+        }
+        
+    </script> -->
 </body>
+
 </html>

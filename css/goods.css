@@ -1,0 +1,46 @@
+#allbox {
+  position: relative;
+}
+#allbox #goodsNav {
+  width: 200%;
+  height: 100px;
+  background-color: rebeccapurple;
+  position: absolute;
+  top: 85px;
+  left: 0px;
+  display: flex;
+  z-index: 1;
+}
+#allbox #goodsNav #goodsNavLeft {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 35px;
+  left: -40px;
+  background-color: cyan;
+  z-index: 10;
+}
+#allbox #goodsNav #goodsNavRight {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 35px;
+  left: 1450px;
+  background-color: cyan;
+  z-index: 100;
+}
+#allbox #goodsNav .goodsNavEl {
+  height: 100%;
+  width: 150px;
+  margin-right: 10px;
+  background-color: yellow;
+}
+#allbox #goodsNav .goodsNavEl.unview {
+  display: none;
+}
+#allbox #goodsNav #goodsNavShowing {
+  width: 1440px;
+  height: 100%;
+  background-color: beige;
+  display: none;
+}/*# sourceMappingURL=goods.css.map */
