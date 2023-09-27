@@ -56,5 +56,17 @@
         console.log(q)
         $('#aaa').css("height", q)
     </script>
+    <script>
+        $(document).bind('mousewheel', function(e){
+        if(e.originalEvent.wheelDelta /120 > 0) {
+            console.log('scrolling up !');
+	        console.log($(this).scrollTop());
+        }
+        else{
+            console.log('scrolling down !');
+            console.log($(this).scrollTop());
+        }
+    });
+    </script>
 </body>
 </html>
