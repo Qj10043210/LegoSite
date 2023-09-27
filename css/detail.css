@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Manrope&family=Montserrat+Alternates&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap");
 #allbox {
   max-width: 1440px;
   min-width: 1440px;
   margin: 0px auto;
-  background-color: blanchedalmond;
+  padding-top: 40px;
   font-family: "Black Ops One", cursive;
   font-family: "Noto Sans", sans-serif;
   font-size: 16px;
@@ -14,7 +15,6 @@
   justify-content: space-around;
   margin: 0px auto;
   margin-bottom: 15px;
-  background-color: aquamarine;
   position: relative;
 }
 #allbox #detailMain #pleaseLogin {
@@ -36,8 +36,8 @@
 #allbox #detailMain #detailImageBox2 {
   margin: 0 auto;
   top: 11%;
-  position: absolute;
-  background-image: url(./images/messageWelcome.png);
+  position: fixed;
+  background-image: url(./images/messageAdd.png);
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 30;
@@ -49,71 +49,154 @@
   background-color: darkgrey;
   display: none;
 }
+#allbox #detailMain #detailImageBox2 button[type=button] {
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  padding: 4px 15px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-align: center;
+  border: rgba(253, 128, 36, 0);
+  cursor: pointer;
+}
+#allbox #detailMain #detailImageBox2 button[type=button]:hover {
+  color: #000;
+}
+#allbox #detailMain #detailImageBox2 button[type=button]:nth-child(2) {
+  background-color: rgb(255, 0, 0);
+  margin-left: 60px;
+  left: 0;
+}
+#allbox #detailMain #detailImageBox2 button[type=button]:nth-child(2):active {
+  background-color: #ddd;
+}
+#allbox #detailMain #detailImageBox2 button[type=button]:nth-child(3) {
+  background-color: rgb(2, 108, 185);
+  right: 110px;
+}
+#allbox #detailMain #detailImageBox2 button[type=button]:nth-child(3):active {
+  background-color: #ddd;
+}
 #allbox #detailMain #detailMainLeft {
-  width: 38%;
+  width: 58%;
   height: 800px;
-  background-color: crimson;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 #allbox #detailMain #detailMainLeft #detailImageBox {
-  width: 530px;
-  height: 530px;
-  background-color: black;
+  width: 750px;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(circle, rgb(255, 255, 255) 61%, rgba(0, 0, 0, 0.0592612045) 100%);
+}
+#allbox #detailMain #detailMainLeft #detailImageBox img {
+  height: -moz-fit-content;
+  height: fit-content;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.7));
+}
+#allbox #detailMain #detailMainLeft #detailImageBox img.unview {
+  filter: grayscale(100%) brightness(80%) drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
 }
 #allbox #detailMain #detailMainLeft #detail3Info {
+  margin-top: 0%;
   width: 530px;
   height: 250px;
-  background-color: beige;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  font-family: "Bebas Neue";
+  font-size: 40px;
+  letter-spacing: 2px;
 }
 #allbox #detailMain #detailMainLeft #detail3Info #detailInfoL {
-  width: 33%;
+  width: 25%;
   height: 80%;
-  background-color: coral;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoL span {
+  font-family: "Montserrat Alternates";
 }
 #allbox #detailMain #detailMainLeft #detail3Info #detailInfoM {
-  width: 33%;
+  width: 25%;
   height: 80%;
-  background-color: coral;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 3px solid rgba(40, 40, 40, 0.4);
+  border-right: 3px solid rgba(40, 40, 40, 0.4);
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoM span {
+  font-family: "Montserrat Alternates";
 }
 #allbox #detailMain #detailMainLeft #detail3Info #detailInfoR {
-  width: 33%;
+  width: 25%;
   height: 80%;
-  background-color: coral;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#allbox #detailMain #detailMainLeft #detail3Info #detailInfoR span {
+  font-family: "Montserrat Alternates";
 }
 #allbox #detailMain #detailMainRight {
-  width: 58%;
-  background-color: blue;
+  width: 38%;
+  background: rgba(213, 213, 213, 0.2);
+  box-shadow: inset 0 0 50px 10px rgb(255, 255, 255);
 }
 #allbox #detailMain #detailMainRight ul {
+  height: 1100px;
   width: 95%;
   margin: 20px auto;
-  background-color: blueviolet;
   display: flex;
   flex-direction: column;
+  font-size: 25px;
+  font-family: "Roboto Flex";
   justify-content: space-between;
 }
 #allbox #detailMain #detailMainRight ul li {
-  margin: 1em 0;
+  padding-left: 30px;
   padding-top: 5%;
   padding-bottom: 5%;
+}
+#allbox #detailMain #detailMainRight ul li p {
+  font-family: "Ubuntu Condensed";
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+#allbox #detailMain #detailMainRight ul li span {
+  padding-left: 1em;
 }
 #allbox #detailMain #detailMainRight ul #detailListStarsNew {
   display: flex;
   justify-content: space-between;
 }
+#allbox #detailMain #detailMainRight ul #detailListStarsNew #detailStars img {
+  width: 30px;
+  height: 30px;
+}
 #allbox #detailMain #detailMainRight ul #detailListStarsNew #detailNew {
-  background-color: white;
+  font-family: "anton";
   display: block;
+  margin-right: 50px;
+  font-size: 35px;
 }
-#allbox #detailMain #detailMainRight ul #detailListStarsNew #detailNew.unview {
-  display: none;
-}
-#allbox #detailMain #detailMainRight ul #detailListPrice::before {
+#allbox #detailMain #detailMainRight ul #detailListPrice span::before {
   content: "$ ";
 }
 #allbox #detailMain #detailMainRight ul #detailListButton {
@@ -129,6 +212,7 @@
   text-align: center;
   line-height: 20px;
   font-size: 20px;
+  cursor: zoom-out;
 }
 #allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonPlus {
   width: 25px;
@@ -137,6 +221,7 @@
   text-align: center;
   line-height: 20px;
   font-size: 20px;
+  cursor: zoom-in;
 }
 #allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonQuant {
   border: none;
@@ -146,6 +231,7 @@
   text-align: center;
   line-height: 20px;
   font-size: 20px;
+  cursor: text;
 }
 #allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy {
   margin-left: 50px;
@@ -155,6 +241,7 @@
   text-align: center;
   line-height: 20px;
   font-size: 20px;
+  cursor: pointer;
 }
 #allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy.unview {
   background-color: black;
@@ -162,7 +249,25 @@
 }
 #allbox #detailMain #detailMainBottom {
   width: 98%;
-  background-color: darkgray;
-  margin-top: 30px;
+  margin-top: 100px;
   padding: 20px;
+  opacity: 0.3;
+  transition: all 0.4s;
+}
+#allbox #detailMain #detailMainBottom:hover {
+  opacity: 1;
+  cursor: none;
+}
+#allbox #detailMain #detailMainBottom p {
+  font-family: "Manrope";
+  font-size: 20px;
+  line-height: 2em;
+  padding-bottom: 30px;
+}
+#allbox #detailMain #detailMainBottom ul {
+  font-family: "Manrope";
+  line-height: 2em;
+  font-size: 20px;
+  text-indent: 50px;
+  padding-left: 50px;
 }/*# sourceMappingURL=detail.css.map */

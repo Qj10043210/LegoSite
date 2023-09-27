@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Manrope&family=Montserrat+Alternates&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap');
 #allbox {
     max-width: 1440px;
     min-width: 1440px;
@@ -88,34 +89,60 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 250px;
+        box-shadow: 10px 10px 10px 1px rgba(20,20,20,0.5);
+        margin-bottom: 10px;
+        // border-bottom: 2px solid rgba(20,20,20,0.5);
         .bagImage{
             width: 250px;
             height: 250px;
             
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img{
-                height: 100%;
-                width: auto;
+                height:fit-content;
+                filter: drop-shadow(5px 5px 5px  rgba(0,0,0,0.2));
             }
         }
         .bagName{
+            
             flex-grow: 3;
             text-align: start;
+            text-indent: 3em;
+            font-family: 'Roboto Flex';
+            font-size: 30px;
+            
         }
         .bagPrice{
             flex-grow: 1;
             text-align: center;
+            font-family: 'Roboto Flex';
+            font-size: 20px;
+            &::before{
+                content: "$";
+                padding-right: 10px;
+            }
         }
         .bagQuant{
             flex-grow: 0.5;
             text-align: center;
+            font-family: "Anton";
+            font-size: 40px;
+            
             .bagQuantMinus{
-
+                border: 1px solid;
             }
             .bagQuantPlus{
 
             }
             .bagQuantInput{
-                
+                text-align: center;
+                width: 100px;
+                font-size: 30px;
+                font-family: "Roboto Flex";
+                border: none;
             }
 
         }

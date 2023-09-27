@@ -5,7 +5,7 @@
             "lessgoTheme": "0",
             "lessgoName": "The Coral Reef",
             "lessgoPrice": "9.99",
-            "lessgoRate": "5",
+            "lessgoRate": "1",
             "lessgoPiece": "92",
             "lessgoMan": "1",
             "lessgoAge": "7",
@@ -17,12 +17,12 @@
             "lessgoTheme": "0",
             "lessgoName": "The \"Abandoned\" Mine",
             "lessgoPrice": "19.99",
-            "lessgoRate": "5",
+            "lessgoRate": "1.5",
             "lessgoPiece": "248",
             "lessgoMan": "1",
             "lessgoAge": "7",
             "lessgoNew": "0",
-            "lessgoBuy": "1"
+            "lessgoBuy": "0"
         },
         {
             "lessgoIndex": "21170",
@@ -82,7 +82,7 @@
             "lessgoMan": "1",
             "lessgoAge": "8",
             "lessgoNew": "0",
-            "lessgoBuy": "1"
+            "lessgoBuy": "0"
         },
         {
             "lessgoIndex": "21180",
@@ -370,7 +370,7 @@
             "lessgoMan": "0",
             "lessgoAge": "6",
             "lessgoNew": "0",
-            "lessgoBuy": "0"
+            "lessgoBuy": "1"
         },
         {
             "lessgoIndex": "31139",
@@ -394,7 +394,7 @@
             "lessgoMan": "0",
             "lessgoAge": "6",
             "lessgoNew": "0",
-            "lessgoBuy": "0"
+            "lessgoBuy": "1"
         },
         {
             "lessgoIndex": "31135",
@@ -406,7 +406,7 @@
             "lessgoMan": "0",
             "lessgoAge": "8",
             "lessgoNew": "0",
-            "lessgoBuy": "0"
+            "lessgoBuy": "1"
         },
         {
             "lessgoIndex": "31136",
@@ -442,7 +442,7 @@
             "lessgoMan": "2",
             "lessgoAge": "8",
             "lessgoNew": "0",
-            "lessgoBuy": "0"
+            "lessgoBuy": "1"
         },
         {
             "lessgoIndex": "11021",
