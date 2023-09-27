@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Great+Vibes&family=Manrope&family=Montserrat+Alternates&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 #allbox {
   max-width: 1440px;
   min-width: 1440px;
@@ -14,9 +15,10 @@
 }
 
 #bagNoItems {
-  font-family: "Great Vibes";
+  font-family: "Orbitron";
   width: 100%;
   height: 550px;
+  letter-spacing: -0.5px;
   background-color: beige;
   position: absolute;
   top: 10px;
@@ -25,15 +27,23 @@
   justify-content: center;
   align-items: center;
   font-size: 60px;
-  filter: grayscale(30%);
-  background-image: url(./images/Wedonthave.png);
-  background-repeat: no-repeat;
-  background-size: auto 100%;
   border-radius: 20px;
   box-shadow: inset 0px 0px 5px 5px white;
 }
+#bagNoItems::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 100%;
+  height: 550px;
+  background-image: url(./images/Wedonthave.png);
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  filter: grayscale(30%);
+}
 #bagNoItems p {
-  padding-left: 240px;
+  padding-left: 340px;
 }
 #bagNoItems.view {
   display: flex;
@@ -121,6 +131,9 @@
   font-family: "Roboto Flex";
   font-size: 20px;
 }
+#bagTable .bagItem .bagPrice span.howdareyou {
+  display: none;
+}
 #bagTable .bagItem .bagPrice::before {
   content: "$";
   padding-right: 10px;
@@ -130,11 +143,34 @@
   text-align: center;
   font-family: "Anton";
   font-size: 40px;
+  display: flex;
+  justify-content: center;
 }
 #bagTable .bagItem .bagQuant .bagQuantMinus {
-  border: 1px solid;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  cursor: zoom-out;
+  background-image: url(./images/BtnRed.png);
+  transition: all 0.5s;
+  background-size: cover;
+}
+#bagTable .bagItem .bagQuant .bagQuantPlus {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  cursor: zoom-in;
+  background-image: url(./images/BtnBlue.png);
+  background-size: cover;
 }
 #bagTable .bagItem .bagQuant .bagQuantInput {
+  margin: 0px 4px;
+  box-shadow: -1px -1px 2px 0px #000;
   text-align: center;
   width: 100px;
   font-size: 30px;
@@ -142,6 +178,11 @@
   border: none;
 }
 #bagTable .bagItem .bagDelete {
+  font-family: "Ubuntu Condensed";
+  font-weight: 800;
+  font-size: 25px;
+  color: red;
+  filter: grayscale(80%);
   flex-grow: 0.5;
   text-align: center;
 }/*# sourceMappingURL=bag.css.map */
