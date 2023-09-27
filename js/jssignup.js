@@ -1,31 +1,36 @@
 // signUpButtonBack = $('#signUpButtonBack');
 let falseBox = [false, false, false, false, false, false]
 let signUpFormStatus = $(".signUpFormStatus")
-let allFine=false;
+let allFine = false;
+let allFine2 = false;
 let imageValue = "";
 $(document).on("click", '#signUpButton', function () {
     // console.log($(document.activeElement).attr('id'))
     let buttonRec = $(document.activeElement).attr('id')
     switch (buttonRec) {
         case "signUpButtonBack":
-            location.href='./index.html'
-        //go to index
+            location.href = './index.html'
+            //go to index
 
 
             break;
         case "signUpButtonClear":
             // console.log(buttonRec)
             clearInfobox()
+
             break;
         case "signUpButtonDone":
             checkingValueInfobox()
             checkingValueEmail()
-            
+
             //need to show complete
-            if(allFine==true){
-                takeShot()
-                
-                allFine=false
+            if (allFine == true) {
+                checkName()
+                if (allFine2 == true) {
+                    takeShot()
+                    allFine2 = false
+                    allFine = false
+                }
                 // location.href='./signin.html'
             }
             break;
@@ -33,23 +38,23 @@ $(document).on("click", '#signUpButton', function () {
 })
 
 //form check ☆☆☆☆☆☆☆☆☆☆☆☆//
-function checkingValueInfobox(){
-    $('.infovalue').each(function(index){
-        if(!$(this).val()){
+function checkingValueInfobox() {
+    $('.infovalue').each(function (index) {
+        if (!$(this).val()) {
             $(this).addClass("infoError")
             $(this).removeClass("infoDone")
-            
-            
-            falseBox[index]=true
+
+
+            falseBox[index] = true
             // $(`.signUpFormStatus li:eq(${index})`).addClass("infoError")
             // $(`.signUpFormStatus li:eq(${index})`).removeClass("infoDone")
         }
-        else{
+        else {
             $(this).removeClass("infoError")
             $(this).addClass("infoDone")
             console.log(index)
-            
-            falseBox[index]=false
+
+            falseBox[index] = false
             // $(`.signUpFormStatus li:eq(${index})`).removeClass("infoError")
             // $(`.signUpFormStatus li:eq(${index})`).addClass("infoDone")
         }
@@ -58,37 +63,65 @@ function checkingValueInfobox(){
     })
     console.log(falseBox)
 }
-function checkingValueEmail(){
-    if (!falseBox[2]){
+function checkingValueEmail() {
+    if (!falseBox[2]) {
         let tempBox = $('#signUpFormEmail').val()
         let tempSource = 0;
-        
+
         tempSource += tempBox.indexOf('@')
         tempSource += tempBox.indexOf('.')
-    if (tempSource < 0) {
-        // $(`.signUpFormStatus li:eq(2)`).addClass("infoError")
-        // $(`.signUpFormStatus li:eq(2)`).removeClass("infoDone")
-        // $('.emailcheck').addClass("infoError")
-        // $('.emailcheck').removeClass("infoDone")
-        $('#signUpFormEmail').addClass("infoError")
-        $('#signUpFormEmail').removeClass("infoDone")
-        allFine=false;
-        $('#emailerror').delay(200).fadeIn()
-        $(document).on("click","tbody",function(){
-            $('#emailerror').delay(100).fadeOut()
-    
-        })
-    }else{
-        // $('.emailcheck').removeClass("infoError")
-        // $('.emailcheck').addClass("infoDone")
-        // $(`.signUpFormStatus li:eq(2)`).removeClass("infoError")
-        // $(`.signUpFormStatus li:eq(2)`).addClass("infoDone")
-        $('#signUpFormEmail').removeClass("infoError")
-        $('#signUpFormEmail').addClass("infoDone")
-        allFine=true;
+        if (tempSource < 0) {
+            // $(`.signUpFormStatus li:eq(2)`).addClass("infoError")
+            // $(`.signUpFormStatus li:eq(2)`).removeClass("infoDone")
+            // $('.emailcheck').addClass("infoError")
+            // $('.emailcheck').removeClass("infoDone")
+            $('#signUpFormEmail').addClass("infoError")
+            $('#signUpFormEmail').removeClass("infoDone")
+            allFine = false;
+            $('#emailerror').delay(200).fadeIn()
+            $(document).on("click", "tbody", function () {
+                $('#emailerror').delay(100).fadeOut()
+
+            })
+        } else {
+            // $('.emailcheck').removeClass("infoError")
+            // $('.emailcheck').addClass("infoDone")
+            // $(`.signUpFormStatus li:eq(2)`).removeClass("infoError")
+            // $(`.signUpFormStatus li:eq(2)`).addClass("infoDone")
+            $('#signUpFormEmail').removeClass("infoError")
+            $('#signUpFormEmail').addClass("infoDone")
+            allFine = true;
+        }
+
     }
-    
+}
+function checkName() {
+    let infoList2 = JSON.parse(localStorage.getItem("signupdata")) || [];
+    let namebox = infoList2.filter(val => val.id == $('#signUpFormName').val())
+    let emailbox = infoList2.filter(val => val.email == $('#signUpFormEmail').val())
+    if (namebox.length == 0 && emailbox.length == 0) {
+        allFine2 = true;
+
     }
+    else {
+        if (namebox.length == 0 && emailbox.length !== 0) {
+            //only email same
+
+            $('#signUpGoHome').addClass("show1")
+        }
+        if (namebox.length !== 0 && emailbox.length == 0) {
+            //only name same
+
+            $('#signUpGoHome').addClass("show2")
+        }
+        if (namebox.length !== 0 && emailbox.length !== 0) {
+            //only name same
+
+            $('#signUpGoHome').addClass("show3")
+        }
+
+    }
+
 }
 //★★★★★★★★★★★★ form check //
 
@@ -96,7 +129,7 @@ function checkingValueEmail(){
 function clearInfobox() {
     $("td input").each(function () {
         $(this).val("")
-        allFine=false;
+        allFine = false;
     })
 }
 //★★★★★★★★★★★★ clear //
@@ -108,7 +141,7 @@ function makeInfoListonLocal() {
         password: $('#signUpFormPassword').val(),
         email: $('#signUpFormEmail').val(),
         phone: $('#signUpFormPhone').val(),
-        
+
         picture: imageValue
     }
     console.log(infoes)
@@ -117,13 +150,13 @@ function makeInfoListonLocal() {
 }
 function takeShot() {
     var node = document.querySelector('#body');
-    
+
     domtoimage.toPng(node).then(function (dataUrl) {
         var img = new Image();
         img.src = dataUrl;
-        
+
         imageValue = img.src
-        
+
         let infoes = {
             id: $('#signUpFormName').val(),
             password: $('#signUpFormPassword').val(),
@@ -131,16 +164,15 @@ function takeShot() {
             phone: $('#signUpFormPhone').val(),
             picture: imageValue
         }
-    
+
         let infoList = JSON.parse(localStorage.getItem("signupdata")) || [];
         infoList.push(infoes);
         localStorage.setItem("signupdata", JSON.stringify(infoList))
-            console.log("sdfas")
-            sessionStorage.removeItem("logname")
-            let loghead=11;
-            sessionStorage.setItem("log", JSON.stringify(loghead))
-            location.reload()
-            location.href='./signin.html'
+        console.log("sdfas")
+        sessionStorage.removeItem("logname")
+        let loghead = 11;
+        sessionStorage.setItem("log", JSON.stringify(loghead))
+        $('#signUpGoHome').addClass("show4")
     }).catch(function (error) {
         console.error('oops, something went wrong!', error);
     });
@@ -148,7 +180,15 @@ function takeShot() {
 
 
 //★★★★★★★★★★★★ go link //
-
+$(document).on('click', '#signUpGoHome', function () {
+    
+    if($(this).hasClass("show4")){
+        $(this).removeClass()
+        location.reload()
+        location.href = './signin.html'
+    }
+    $(this).removeClass()
+})
 
 
 //input modify ☆☆☆☆☆☆☆☆☆☆☆☆//

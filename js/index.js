@@ -1,5 +1,8 @@
 let logs = JSON.parse(sessionStorage.getItem("log")) || 0;
-
+let abc = JSON.parse(sessionStorage.getItem("goodsIndex")) || 100;
+if(abc == 100){
+    sessionStorage.setItem("goodsIndex", 0)
+}
 if (logs == 0) {
     logs = 11
     sessionStorage.setItem("log", JSON.stringify(logs))

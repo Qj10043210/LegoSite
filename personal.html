@@ -2,6 +2,7 @@
 <html lang="ko">
 
 <head>
+    <link rel="icon" type="image/x-icon" href="./css/images/header_logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -44,7 +45,7 @@
     <script type="module" src="./js/index.js"></script>
     <script>
         let YourName = JSON.parse(sessionStorage.getItem("logname"))
-        document.title = YourName;
+        document.title = "Hello "+YourName;
         let AllYourName = JSON.parse(localStorage.getItem("signupdata"))
         let objIndex = AllYourName.findIndex((obj => obj.id == YourName))
         let a = AllYourName[objIndex].picture
