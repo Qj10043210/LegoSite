@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="header"></div>
+    <div id="allbox">
+        <div id="signInLegoHead">
+            <div id="signInFace"></div><!--class="face"-->
+            <div id="signInData">
+                <div id="signInErrorbox"></div>
+                <form action="" class="signInForm">
+                    <ul>
+                        <span class="signInMessage">Welcome!</span>
+                        <li>ID</li>
+                        <li><input class="signInInput" type="text" autocomplete="off" id="signInId"></li>
+                        <li>PASSWORD</li>
+                        <li><input class="signInInput" type="text" autocomplete="off" id="signInPassword"></li>
+                        <li id="signInButton">
+                            <button type="button" id="signInButtonBack">back</button>
+                            <button type="button" id="signInButtonClear">clear</button>
+                            <button type="button" id="signInButtonDone">confirm</button>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+            <div id="signInGoHome">
+                <button type="button">home</button>
+            </div>
+        </div>
+    </div>
+    <script>$('.header').load('./header.html')</script>
+    
+    <script type="module" src="./js/index.js"></script>
+    <script type="module" src="./js/jssignin.js"></script>
+    <script type="module" src="./js/jshead.js"></script>
+</body>
+</html>
