@@ -1,0 +1,194 @@
+#allbox {
+    max-width: 1440px;
+    min-width: 1440px;
+    margin: 0px auto;
+    background-color: blanchedalmond;
+    height: 960px;
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
+    #detailMain{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0px auto;
+        padding: 100px 0;
+        background-color: aquamarine;
+        position: relative;
+        #pleaseLogin{
+            margin: 0 auto;
+            top: 11%;
+            position: absolute;
+            background-image: url(./images/messageWelcome.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 30;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+            border: solid 8px black;
+            border-radius: 20px;
+            width: 450px;
+            height: 132px;
+            background-color: darkgrey;
+            display: none;
+        }
+        #detailImageBox2{
+            margin: 0 auto;
+            top: 11%;
+            position: absolute;
+            background-image: url(./images/messageWelcome.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 30;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+            border: solid 8px black;
+            border-radius: 20px;
+            width: 450px;
+            height: 132px;
+            background-color: darkgrey;
+            display: none;
+            p{
+
+            }
+            #detailImageBoxView{
+
+            }   
+            #detailImageBoxKeep{
+
+            }
+        }
+        #detailMainLeft{
+            width: 38%;
+            height: 800px;
+            background-color: crimson;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            #detailImageBox{
+                width: 530px;
+                height: 530px;
+                background-color: black;
+            }
+            #detail3Info{
+                width: 530px;
+                height: 250px;
+                background-color: beige;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                #detailInfoL{
+                    width: 33%;
+                    height: 80%;
+                    background-color: coral;
+                }
+                #detailInfoM{
+                    width: 33%;
+                    height: 80%;
+                    background-color: coral;
+                }
+                #detailInfoR{
+                    width: 33%;
+                    height: 80%;
+                    background-color: coral;
+                }
+            }
+        }
+        #detailMainRight{
+            width: 58%;
+            background-color: blue;
+
+            ul{
+                width: 95%;
+                margin: 20px auto;
+                background-color:blueviolet;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                li{
+                    margin: 1em 0;
+                    padding-top: 5%;
+                    padding-bottom: 5%;
+                }
+                #detailListStarsNew{
+                    display: flex;
+                    justify-content: space-between;
+                    #detailStars{
+
+                    }
+                    #detailNew{
+                        background-color: white;
+                        display: block;
+                        &.unview{
+                            display: none;
+                        }
+                    }
+                }
+                #detailListIndex{
+
+                }
+                #detailListName{
+
+                }
+                #detailListPrice{
+                    &::before{
+                        content: "$ ";
+                    }
+                }
+                #detailListTheme{
+
+                }
+                #detailListButton{
+                    display: flex;
+                    justify-content: center;
+                    column-gap: 10px;
+                    #detailListButtonMinus{
+                        width: 25px;
+                        height: 25px;
+                        background-color: azure;
+                        text-align: center;
+                        line-height: 20px;
+                        font-size: 20px;
+                    }
+                    #detailListButtonPlus{
+                        width: 25px;
+                        height: 25px;
+                        background-color: azure;
+                        text-align: center;
+                        line-height: 20px;
+                        font-size: 20px;
+                    }
+                    #detailListButtonQuant{
+                        border: none;
+                        width: 50px;
+                        height: 25px;
+                        background-color: azure;
+                        text-align: center;
+                        line-height: 20px;
+                        font-size: 20px;
+                    }
+                    #detailListButtonBuy{
+                        margin-left: 50px;
+                        width: 35px;
+                        height: 25px;
+                        background-color: azure;
+                        text-align: center;
+                        line-height: 20px;
+                        font-size: 20px;
+                        &.unview{
+                            background-color: black;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+        #detailMainBottom{
+            width: 98%;
+            //height 은 js에서 2배로 넣을 생각
+            background-color: darkgray;
+            margin-top: 30px;
+            padding: 25px;
+        }
+    }
+}

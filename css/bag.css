@@ -1,0 +1,43 @@
+#allbox {
+  max-width: 1440px;
+  min-width: 1440px;
+  margin: 0px auto;
+  background-color: blanchedalmond;
+  height: 960px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Black Ops One", cursive;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 16px;
+}
+
+#bagTable .bagItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#bagTable .bagItem .bagImage {
+  width: 250px;
+  height: 250px;
+}
+#bagTable .bagItem .bagImage img {
+  height: 100%;
+  width: auto;
+}
+#bagTable .bagItem .bagName {
+  flex-grow: 3;
+  text-align: start;
+}
+#bagTable .bagItem .bagPrice {
+  flex-grow: 1;
+  text-align: center;
+}
+#bagTable .bagItem .bagQuant {
+  flex-grow: 0.5;
+  text-align: center;
+}
+#bagTable .bagItem .bagDelete {
+  flex-grow: 0.5;
+  text-align: center;
+}/*# sourceMappingURL=bag.css.map */

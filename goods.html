@@ -7,22 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goods</title>
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/goods.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
         integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
-    
+
     <div class="header"></div>
     <div id="allbox">
-        
+
         <div id="goodsNav">
             <div id="goodsNavLeft"></div>
             <div id="goodsNavRight"></div>
@@ -41,17 +42,42 @@
             <div class="goodsNavEl unview"><img src="" alt=""></div>
             <div class="goodsNavEl unview"><img src="" alt=""></div>
             <div class="goodsNavEl unview"><img src="" alt=""></div>
-            <div id="goodsNavShowing"></div>
+
         </div>
-        <div id="goodsshowing"></div>
-       
+        <div id="goodsNow">
+            <div id="goodsNowMessage">상품이름</div>
+        </div>
+        <div id="goodsList">
+            <div class="goodsItemsBox view" id="goodsAd">
+
+            </div>
+            <div class="goodsItemsBox unview"></div>
+            <div class="goodsItemsBox unview"></div>
+            <div class="goodsItemsBox unview"></div>
+
+
+        </div>
+
     </div>
     <script>$('.header').load('./header.html')</script>
 
     <script type="module" src="./js/index.js"></script>
-    
+
     <script>
-        
+        let goodsData3 = "";
+        $.ajax({
+            type: 'GET',
+            url: './js/data.json',
+            dataType: 'json',
+            success: function (gdata) {
+
+                goodsData3 = gdata.lessgoThemes
+
+            },
+            error: function (xhr) {
+                alert(xhr.status + "/" + xhr.errorText)
+            }
+        })
     </script>
     <script>
         let goodsData = "";
@@ -60,9 +86,9 @@
             url: './js/data.json',
             dataType: 'json',
             success: function (gdata) {
-                // console.log(gdata.lessgoNav)
+                console.log(gdata.lessgoNav)
                 goodsData = gdata.lessgoNav
-                usedata(0)
+                usedata()
             },
             error: function (xhr) {
                 alert(xhr.status + "/" + xhr.errorText)
@@ -70,24 +96,160 @@
         })
 
     </script>
-    <!-- <script>
-        function usedata(theme) {
-            let newdata = goodsData.filter(value => value.lessgoTheme == theme)
-            console.log(newdata)
-            for(let i =0; i<goodsData.length; i++){
+    <script>
+        function usedata() {
+
+            console.log("new")
+            for (let i = 0; i < goodsData.length; i++) {
                 let a = "https://github.com/jillina1004/imagebox/blob/main/";
                 let b = goodsData[i].lsessgoIndex;
                 let e = '' + b;
                 let c = ".png?raw=true";
-                let indexImage = a+e+c
+                let indexImage = a + e + c
                 console.log(indexImage)
-                $('#goodsSlickIn').children().eq(i).children().eq(1).children().attr("src",indexImage)
-                
+                $('#goodsNav').children().eq(i + 2).children().attr("src", indexImage)
+                $('#goodsNav').children().eq(i + 2).children().attr("alt", i)
             }
-            
+
         }
-        
-    </script> -->
+
+    </script>
+    <script>
+        let showingData = "";
+        $.ajax({
+            type: 'GET',
+            url: './js/data.json',
+            dataType: 'json',
+            success: function (gdata) {
+
+                showingData = gdata.lessgo
+                usedata2(0)
+            },
+            error: function (xhr) {
+                alert(xhr.status + "/" + xhr.errorText)
+            }
+        })
+
+    </script>
+    <script>
+        function usedata2(theme) {
+            let newdata2 = showingData.filter(value => value.lessgoTheme == theme)
+            console.log(newdata2)
+            let lengthCheck2 = newdata2.length
+            let lengthCheck = lengthCheck2 % 4
+            $('#goodsNowMessage').text(goodsData3[theme].fullName)
+            let divBox = ""
+            divBox += `<div class="goodsItemsBox view" id="goodsAd">
+                        <img src="./css/images/goodsAd.png" alt=""></img>
+                        </div>`
+            switch (lengthCheck) {
+
+                case 0:
+                    newdata2.forEach(element => {
+                        divBox += `<div class="goodsItemsBox view able${element.lessgoBuy}"><img src="https://github.com/jillina1004/imagebox/blob/main/${element.lessgoIndex}.png?raw=true" alt="${element.lessgoIndex}"></img><p>${element.lessgoName}</p></div>`
+                    });
+                    divBox += `<div class="goodsItemsBox unview"></div>
+                                <div class="goodsItemsBox unview"></div>
+                                <div class="goodsItemsBox unview"></div>`
+                    break;
+                case 1:
+                    newdata2.forEach(element => {
+                        divBox += `<div class="goodsItemsBox view able${element.lessgoBuy}"><img src="https://github.com/jillina1004/imagebox/blob/main/${element.lessgoIndex}.png?raw=true" alt="${element.lessgoIndex}"></img><p>${element.lessgoName}</p></div>`
+                    });
+                    divBox += `<div class="goodsItemsBox unview"></div>
+                                <div class="goodsItemsBox unview"></div>`
+                    break;
+                case 2:
+                    newdata2.forEach(element => {
+                        divBox += `<div class="goodsItemsBox view able${element.lessgoBuy}"><img src="https://github.com/jillina1004/imagebox/blob/main/${element.lessgoIndex}.png?raw=true" alt="${element.lessgoIndex}"></img><p>${element.lessgoName}</p></div>`
+                    });
+                    divBox += `<div class="goodsItemsBox unview"></div>
+                                `
+                    break;
+                case 3:
+
+                    newdata2.forEach(element => {
+                        divBox += `<div class="goodsItemsBox view able${element.lessgoBuy}"><img src="https://github.com/jillina1004/imagebox/blob/main/${element.lessgoIndex}.png?raw=true" alt="${element.lessgoIndex}"></img><p>${element.lessgoName}</p></div>`
+                    });
+
+
+                    break;
+
+            }
+            $("#goodsList *").remove()
+            $("#goodsList").append(divBox)
+
+
+
+
+
+        }
+
+    </script>
+    <script>
+        let speed = 5000;
+        let pausing = false
+        setInterval(giveFocus, speed);
+        function giveFocus() {
+            if (!pausing) {
+                $('#goodsNav').children().eq(2).addClass("unview")
+                $('#goodsNav').children().eq(11).removeClass("unview")
+                let a = $('#goodsNav').children().eq(2)
+                $('#goodsNav').append(a)
+            }
+            // $('#goodsNav').children().eq(2).remove()
+
+        }
+        $(document).on("click", '#goodsNavLeft', function () {
+            pausing = true;
+            $('#goodsNav').children().eq(10).addClass("unview")
+            $('#goodsNav').children().eq(16).removeClass("unview")
+            let a = $('#goodsNav').children().eq(16)
+            a.insertAfter('#goodsNavRight')
+            pausing = false
+
+        })
+
+        $(document).on("click", '#goodsNavRight', function () {
+            pausing = true;
+            $('#goodsNav').children().eq(2).addClass("unview")
+            $('#goodsNav').children().eq(11).removeClass("unview")
+            let a = $('#goodsNav').children().eq(2)
+            $('#goodsNav').append(a)
+            pausing = false
+
+        })
+
+    </script>
+    <script>
+         $(document).on("click", '.goodsNavEl', function () {
+            let tempBox = $(this).children().attr("alt")
+            usedata2(tempBox)
+
+         })
+    </script>
+    <script>
+        $(document).on("click", '.goodsItemsBox', function () {
+            let tempBox = $(this).children().attr("alt")
+            let tempBox2 = showingData.filter(value => value.lessgoIndex == tempBox)
+                // console.log(tempBox2)
+                let tempBox3 = {
+                    lessgoAge: tempBox2[0].lessgoAge,
+                    lessgoBuy: tempBox2[0].lessgoBuy,
+                    lessgoIndex: tempBox2[0].lessgoIndex,
+                    lessgoMan: tempBox2[0].lessgoMan,
+                    lessgoName: tempBox2[0].lessgoName,
+                    lessgoNew: tempBox2[0].lessgoNew,
+                    lessgoPiece: tempBox2[0].lessgoPiece,
+                    lessgoPrice: tempBox2[0].lessgoPrice,
+                    lessgoRate: tempBox2[0].lessgoRate,
+                    lessgoTheme: goodsData3[tempBox2[0].lessgoTheme].fullName
+                }
+            sessionStorage.setItem("Items", JSON.stringify(tempBox3))
+            location.href ='./detail.html'
+        })
+    </script>
+
 </body>
 
 </html>

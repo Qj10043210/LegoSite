@@ -5,7 +5,7 @@ let cart = JSON.parse(localStorage.getItem("signupdata"))
 var yesme={}
 var idss=[]
 var ids={}
-let logsignin = JSON.parse(localStorage.getItem("log"))
+let logsignin = JSON.parse(sessionStorage.getItem("log"))
 
 $(document).on("click", '#signInButton', function () {
     // console.log($(document.activeElement).attr('id'))
@@ -20,7 +20,7 @@ $(document).on("click", '#signInButton', function () {
             break;
         case "signInButtonClear":
             // console.log(buttonRec)
-            clearInfobox()
+            location.href='./signup.html'
             break;
         case "signInButtonDone":
             checkingValueInfobox()
@@ -66,9 +66,9 @@ function checkingValueTwo() {
         logbox = 1;
     }
     else {
-
-        $('.signInMessage').text("")
-        $('.signInMessage').text("Please fill up all boxes below!")
+        
+        // $('.signInMessage').text("")
+        // $('.signInMessage').text("Please fill up all boxes below!")
     }
 }
 //★★★★★★★★★★★★ form check //
@@ -106,7 +106,10 @@ function checkSource(){
         orderRemove()
         $('#signInGoHome').delay(800).fadeIn()
         logsignin=22
-        localStorage.setItem("log", JSON.stringify(logsignin))
+        sessionStorage.setItem("log", JSON.stringify(logsignin))
+        let logsName =yesme.id
+
+        sessionStorage.setItem("logname", JSON.stringify(logsName))
         $('#headerSign span').text("SIGN-OUT")
         $('#headerSign div').addClass("loging")
 

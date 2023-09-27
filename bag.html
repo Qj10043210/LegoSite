@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/bag.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+        integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./dist/dom-to-image.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Noto+Sans+KR&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="header"></div>
+    <div id="allbox">
+        <table id="bagTable">
+            <tr class="bagItem">
+                <td class="bagImage"><img src="./css/images/goodsAd.png" alt=""></td>
+                <td class="bagName">ADADADADAD</td>
+                <td class="bagPrice">PRICE</td>
+                <td class="bagQuant">
+                    <div class="bagQuantMinus">-</div>
+                    <input onkeypress="return isNumber(event)" type="text" name="bagQuantInput" id="bagQuantInput0"
+                        class="bagQuantInput">
+                    <div class="bagQuantMinus">+</div>
+                </td>
+                <td class="bagDelete">DElETe</td>
+            </tr>
+        </table>
+    </div>
+    <script>//callUp
+        $('.header').load('./header.html')
+        // $('.nav').load('./nav.html')
+    </script>
+    <script type="module" src="./js/index.js"></script>
+    <script>
+        let whatYouBuy = JSON.parse(sessionStorage.getItem("buys"))
+        console.log(whatYouBuy)
+    </script>
+
+
+
+    <script>
+
+        function isNumber(evt) { //<input type="text" onkeypress="return isNumber(event)">
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+                return false;
+            }
+            return true;
+        }
+        $('.bagQuantInput').bind('keyup blur', function () {
+            $(this).val($(this).val().replace(/[^0-9]/g, ''))
+        });
+    </script>
+
+</body>
+
+</html>

@@ -13,6 +13,9 @@
             </div>
         </div>
         <div id="headerRight">
+            <div id="headerSignUp">
+                <div></div><span>SIGN-UP</span>
+            </div>
             <div id="headerSign">
                 <div></div><span>SIGN-IN</span>
             </div>
@@ -31,8 +34,9 @@
     </div>
 
 </header>
+
 <script>
-    let loghead = JSON.parse(localStorage.getItem("log"))
+    let loghead = JSON.parse(sessionStorage.getItem("log"))
 console.log(loghead)
 if(loghead==22){
     $('#headerSign span').text("SIGN-OUT")
@@ -54,7 +58,7 @@ $(document).on("click",".headerMessageBoxYes", function(){
     $('#headerSign div').removeClass("loging")
     $('#headerMessageBox').addClass("unview")
     loghead=11;
-    localStorage.setItem("log", JSON.stringify(loghead))
+    sessionStorage.setItem("log", JSON.stringify(loghead))
     location.reload()
 })
 $(document).on("click",".headerMessageBoxNo", function(){
@@ -62,4 +66,19 @@ $(document).on("click",".headerMessageBoxNo", function(){
     $('#headerMessageBox').addClass("unview")
     
 })
+</script>
+<script>
+
+    $(document).on("click", '#headerSignUp', function(){
+        location.href='./signup.html'
+    })
+    $(document).on("click", '#headerLog', function(){
+        location.href='./index.html'
+    })
+    $(document).on("click", '#headerGoods', function(){
+        location.href='./goods.html'
+    })
+    // $(document).on("click", '#headerSignUp', function(){
+    //     location.href='./signup.html'
+    // })
 </script>
