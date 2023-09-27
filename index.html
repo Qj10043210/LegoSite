@@ -129,6 +129,12 @@
             });
         });
     </script>
+    <script>
+        let q = parseInt($(`.mainSlickIn2`).css("top")) + parseInt($(`.mainSlickIn2`).css("height"))
+console.log(q)
+q = q + "px"
+$(`#main`).css("height",q)
+    </script>
 </body>
 
 </html>

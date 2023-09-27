@@ -3,19 +3,17 @@
   min-width: 1440px;
   margin: 0px auto;
   background-color: blanchedalmond;
-  height: 960px;
   font-family: "Black Ops One", cursive;
   font-family: "Noto Sans", sans-serif;
   font-size: 16px;
 }
 #allbox #detailMain {
   width: 100%;
-  height: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 0px auto;
-  padding: 100px 0;
+  margin-bottom: 15px;
   background-color: aquamarine;
   position: relative;
 }
@@ -166,5 +164,5 @@
   width: 98%;
   background-color: darkgray;
   margin-top: 30px;
-  padding: 25px;
+  padding: 20px;
 }/*# sourceMappingURL=detail.css.map */
