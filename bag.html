@@ -22,20 +22,16 @@
 <body>
     <div class="header"></div>
     <div id="allbox">
+        <div id="bagNoItems">
+            <p>아무것도 없지요</p>
+        </div>
         <table id="bagTable">
-            <tr class="bagItem">
-                <td class="bagImage"><img src="./css/images/goodsAd.png" alt=""></td>
-                <td class="bagName">ADADADADAD</td>
-                <td class="bagPrice">PRICE</td>
-                <td class="bagQuant">
-                    <div class="bagQuantMinus">-</div>
-                    <input onkeypress="return isNumber(event)" type="text" name="bagQuantInput" id="bagQuantInput0"
-                        class="bagQuantInput">
-                    <div class="bagQuantMinus">+</div>
-                </td>
-                <td class="bagDelete">DElETe</td>
-            </tr>
+
         </table>
+        <div id="bagMessageBox" class="unview">
+            <button class="bagMessageBoxYes" type="button">yes</button>
+            <button class="bagMessageBoxNo" type="button">no</button>
+        </div>
     </div>
     <script>//callUp
         $('.header').load('./header.html')
@@ -43,12 +39,74 @@
     </script>
     <script type="module" src="./js/index.js"></script>
     <script>
-        let whatYouBuy = JSON.parse(sessionStorage.getItem("buys"))
+        function new_box(){let whatYouBuy = JSON.parse(sessionStorage.getItem("buys"))
         console.log(whatYouBuy)
+
+        if (whatYouBuy) {
+            $('#bagNoItems').removeClass('view')
+            $('#bagTable *').remove()
+            whatYouBuy.forEach((element, index) => {
+                let tempBox = ''
+                tempBox += `<tr class="bagItem el{}">`
+                tempBox += `<td class="bagImage">`
+                tempBox += `<img src="https://github.com/jillina1004/imagebox/blob/main/${element.lessgoIndex}.png?raw=true" alt="${element.lessgoIndex}">`
+                tempBox += `</td>`
+                tempBox += `<td class="bagName">${element.lessgoName}</td>`
+                tempBox += `<td class="bagPrice">${element.lessgoPrice}</td>`
+                tempBox += `<td class="bagQuant">
+                    <div class="bagQuantMinus">-</div>
+                    <input onkeypress="return isNumber(event)" type="text" name="bagQuantInput" id="bagQuantInput${index}"
+                        class="bagQuantInput" value="${element.lessgoQuant}">
+                    <div class="bagQuantPlus">+</div>
+                </td>`
+                tempBox += `<td class="bagDelete">DElETe</td>
+            </tr>`
+                
+                $('#bagTable').append(tempBox)
+            });
+            if(whatYouBuy.length==0){
+                $('#bagTable *').remove()
+            $('#bagNoItems').addClass('view')
+            }
+        } else {
+            $('#bagTable *').remove()
+            $('#bagNoItems').addClass('view')
+            
+        }}
+        new_box();
     </script>
+    <script>
+        $(document).on("click", ".bagQuantMinus", function () {
+            let q = $(this).next().val()
+            if (q >= 2) {
+                q--;
+                $(this).next().val(q)
+            }
+        })
+        $(document).on("click", ".bagQuantPlus", function () {
+            let q = $(this).prev().val()
+            q++;
+            $(this).prev().val(q)
 
-
-
+        })
+        let w = ""
+        $(document).on("click", ".bagDelete", function () {
+            $('#bagMessageBox').removeClass('unview')
+            w = $(this).prev().prev().prev().prev().children().attr("alt")
+        })
+        $(document).on("click", ".bagMessageBoxYes", function () {
+            let tempBox = JSON.parse(sessionStorage.getItem("buys")) || [];
+            let objIndex = tempBox.findIndex((obj => obj.lessgoIndex == w));
+            $('#bagMessageBox').addClass('unview')
+            tempBox.splice(objIndex, 1)
+            sessionStorage.setItem("buys", JSON.stringify(tempBox))
+            setInterval(new_box(), 800);
+        })
+        $(document).on("click", ".bagMessageBoxNo", function () {
+            w = 0;
+            $('#bagMessageBox').addClass('unview')
+        })
+    </script>
     <script>
 
         function isNumber(evt) { //<input type="text" onkeypress="return isNumber(event)">

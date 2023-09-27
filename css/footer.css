@@ -1,10 +1,10 @@
-
 footer {
-    background-image: url(./images/footer_background_img.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    /* width: 1920px; */
-    display: flex;
+  background-image: url(./images/footer_background_img.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* width: 1920px; */
+  display: flex;
+  margin-top: 1em;
 }
 
 .content {
@@ -16,25 +16,26 @@ footer {
 }
 
 .contentTop {
-    /* padding-top: 50px; */
+  /* padding-top: 50px; */
 }
 
 .contentLeft {
   width: 50%;
-  
   /* display: flex;
   flex-direction: column; */
-  
 }
 
 .contentRight {
   display: flex;
   justify-content: center;
-  column-gap: 50px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
 }
+
 .legoLogo {
   width: 200px;
 }
+
 ul {
   list-style: none;
   display: flex;
@@ -42,9 +43,11 @@ ul {
   padding: 0;
   margin: 0;
 }
+
 li:not(:first-child) {
   margin-top: 0.8em;
 }
+
 ul li a {
   color: #ffffff;
   text-decoration: none;
@@ -55,6 +58,7 @@ ul li a {
   line-height: 2;
   margin: 0;
 }
+
 input,
 button {
   font-size: 1em;
@@ -63,10 +67,12 @@ button {
   border-radius: 5px;
   margin-bottom: 5px;
 }
+
 button {
   background-color: rgb(253, 128, 36);
   color: #ffffff;
 }
+
 div.social {
   /* display: flex; */
   justify-content: space-around;
@@ -74,6 +80,7 @@ div.social {
   flex-direction: row;
   margin-top: 0.5em;
 }
+
 .social i {
   color: #ffffff;
 }
@@ -81,18 +88,19 @@ div.social {
 .copyright {
   padding: 0.3em 1em;
 }
-.footer-menu{
+
+.footer-menu {
   float: left;
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .copyright p {
   font-size: 0.9em;
   text-align: left;
 }
+
 @media screen and (max-width: 850px) {
   .row.primary {
     grid-template-columns: 1fr;
   }
-
-}
+}/*# sourceMappingURL=footer.css.map */
