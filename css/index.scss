@@ -25,34 +25,37 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 16px;
     
     #signUp {
-        width: 80%;
+        width: 1200px;
         height: 720px;
         background-color: white;
         display: flex;
-        border: 5px solid #000;
-        border-radius: 20px;
+        border: 10px solid #000;
+        border-radius:  30px 30px 0 0;
 
         #signUpMinifigure {
             position: relative;
             width: 50%;
             height: 100%;
             background-color: aliceblue;
-            border-radius: 15px 0px 0px 15px;
-            border-right: 5px solid #000;
+            border-radius: 20px 0px 0px 0px;
+            border-right: 10px solid #000;
 
             div.head2 {
-                width: 70%;
-                height: 10%;
+                width: 300px;
+                height: 150px;
                 position: absolute;
-                top: calc(-10% - 5px);
+                top: calc(-10% - 10px);
                 background-color: azure;
-                left: 15%;
-                border-radius: 15px 15px 0px 0px;
-                border-top: 5px solid #000;
-                border-left: 5px solid #000;
-                border-right: 5px solid #000;
+                left: 25%;
+                border-radius: 25px;
+                border: 10px solid #000;
+                z-index: -99;
+                
             }
 
             #minifigureHTML {
@@ -66,24 +69,38 @@
             position: relative;
             width: 50%;
             height: 100%;
-            background-color: rgb(53, 64, 73);
-            border-radius: 0px 15px 15px 0px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 0px 20px 0px 0px;
+
+            .signUpFormHead {
+                padding-top: 30px;
+                font-family: 'Black Ops One', cursive;
+                font-size: 38px;
+                font-weight: bold;
+            }
+
+            .signInFormSign {
+                padding-top: 10px;
+                margin-bottom: 60px;
+                font-size: 22px;
+                font-weight: 550;
+            }
 
             div.head2 {
-                width: 70%;
-                height: 10%;
+                width: 300px;
+                height: 150px;
                 position: absolute;
-                top: calc(-10% - 5px);
-                background-color: azure;
-                left: 15%;
-                border-radius: 15px 15px 0px 0px;
-                border-top: 5px solid #000;
-                border-left: 5px solid #000;
-                border-right: 5px solid #000;
+                top: calc(-10% - 10px);
+                background-color: #fff;
+                left: 25%;
+                border-radius: 25px;
+                border: 10px solid #000;
+                z-index: -99;
             }
 
             .signUpForm {
                 table {
+                    
                     thead {
                         .emailcheck {
                             &.infoDone {
@@ -113,14 +130,55 @@
                     }
 
                     tbody {
+                        
                         tr {
+                            width: 470px; 
+                            display: flex;
+                            justify-content: center;
+                            #signUpFormBirth{
+                                margin-right:73px ;
+                            }
                             td {
-                                input {
+                                text-align: center;
+                                padding-bottom: 20px;
+                                    font-size: 20px;
+                                input { 
+                                    box-sizing: border-box;
+                                    display: block;
+                                    width: 150%;
+                                    border: solid 2px rgba(0, 0, 0, 0.3);
+                                    border-radius: 5px;
+                                    padding: 13px;
+                                    outline: 0;
+                                    font-size: 0.8em;
+
                                     &.infoError {
-                                        border: red 1px solid;
+                                        border: solid 2px red;
                                     }
                                 }
                             }
+                        }
+                    }
+
+                    tfoot {
+                        td {padding-top: 20px;
+                            text-align: center;
+                            button[type=button]{
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 4px;
+    background: rgb(253,128,36);
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1em;
+    text-align: center;
+    border: rgb(253,128,36);
+    &:active {
+        background: #ddd;
+    }
+                            }
+                            
                         }
                     }
                 }
@@ -282,3 +340,85 @@
 }
 
 //★★★★★★★★★★★★ signInArea //
+//Index ☆☆☆☆☆☆☆☆☆☆☆☆//
+#main {
+    #mainSlickOut {
+        margin: 0px auto;
+        width: 1440px;
+        height: auto;
+        background-color: antiquewhite;
+
+        #mainSlickIn {
+            padding-top: 30px;
+            width: 100%;
+            height: 700px;
+            background-color: chartreuse;
+
+            .mainSlickForm {
+                width: 300px;
+                height: 600px;
+                background-color: rgb(210, 223, 30);
+                margin: 0px 15px;
+                display: flex;
+                align-items: end;
+                justify-content: center;
+                position: relative;
+
+                .mainSlickUnder {
+                    width: 70%;
+                    height: 300px;
+                    background-color: chocolate;
+                }
+
+                .mainSlickUpper {
+                    width: 100%;
+                    position: absolute;
+                    display:flex;
+                    justify-content: center;
+                    &:nth-child(1) {
+                        bottom: 15%;
+                    }
+
+                    &:nth-child(2) {
+                        bottom: 15%;
+                    }
+
+                    &:nth-child(3) {
+                        bottom: 15%;
+                    }
+
+                    &:nth-child(4) {
+                        bottom: 15%;
+                    }
+
+                    &:nth-child(5) {
+                        bottom: 15%;
+                    }
+
+                    &:nth-child(6) {
+                        bottom: 15%;
+                    }
+
+                    &:nth-child(7) {
+                        bottom: 15%;
+                    }
+
+                    &:nth-child(8) {
+                        bottom: 15%;
+                    }
+                    &:hover  img{
+                        width: 100%;
+                    }
+                    img {
+                        width: 70%;
+                        transition: all 0.4s;
+                        // &:hover{
+                        //     width: 100%;
+                        // }
+                    }
+                }
+            }
+        }
+    }
+}
+    //★★★★★★★★★★★★ Index //

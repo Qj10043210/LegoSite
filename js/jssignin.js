@@ -6,7 +6,7 @@ var yesme={}
 var idss=[]
 var ids={}
 let logsignin = JSON.parse(localStorage.getItem("log"))
-console.log(logsignin)
+
 $(document).on("click", '#signInButton', function () {
     // console.log($(document.activeElement).attr('id'))
     let buttonRec = $(document.activeElement).attr('id')
@@ -105,8 +105,8 @@ function checkSource(){
     if(simple>0){
         orderRemove()
         $('#signInGoHome').delay(800).fadeIn()
-        localStorage.setItem("Logged",true)
-        checklogged = true;
+        logsignin=22
+        localStorage.setItem("log", JSON.stringify(logsignin))
         $('#headerSign span').text("SIGN-OUT")
         $('#headerSign div').addClass("loging")
 
@@ -198,35 +198,35 @@ function removeElement3(target) {
 //★★★★★★★★★★★★ home//
 
 $(document).on("click","#signInGoHome",function(){
-    
+        location.reload()
         location.href='./index.html'
     
 })
 //home ☆☆☆☆☆☆☆☆☆☆☆☆//
 
-//signINOUT ☆☆☆☆☆☆☆☆☆☆☆☆//
+// //signINOUT ☆☆☆☆☆☆☆☆☆☆☆☆//
 
 
 
 
-if (a==true){
+// if (a==true){
     
-    $('#headerSign span').text("SIGN-OUT")
-    $('#headerSign div').addClass("loging")
+//     $('#headerSign span').text("SIGN-OUT")
+//     $('#headerSign div').addClass("loging")
 
-$(document).on("click","#headerSign",function(){
+// $(document).on("click","#headerSign",function(){
     
-    console.log("gio")
-    if(a==true){
+//     console.log("gio")
+//     if(a==true){
 
-        $('#headerMessageBox').toggleClass("unview")
-    }
-    else{
-        location.href='./signin.html'
-    }
-})
-}
-else{
+//         $('#headerMessageBox').toggleClass("unview")
+//     }
+//     else{
+//         location.href='./signin.html'
+//     }
+// })
+// }
+// else{
     
-}
-//★★★★★★★★★★★★ signINOUT //
+// }
+// //★★★★★★★★★★★★ signINOUT //

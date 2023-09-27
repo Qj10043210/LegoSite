@@ -95,7 +95,7 @@ function makeInfoListonLocal() {
         password: $('#signUpFormPassword').val(),
         email: $('#signUpFormEmail').val(),
         phone: $('#signUpFormPhone').val(),
-        gender: $('#signUpFormGender').val(),
+        
         picture: imageValue
     }
     console.log(infoes)
@@ -115,7 +115,7 @@ function takeShot() {
             password: $('#signUpFormPassword').val(),
             email: $('#signUpFormEmail').val(),
             phone: $('#signUpFormPhone').val(),
-            gender: $('#signUpFormGender').val(),
+            
             picture: imageValue
         }
         console.log(infoes)
@@ -148,9 +148,9 @@ $('#signUpFormName').bind('keyup blur', function () {
 $('input[type="password"]').bind('keyup blur', function () {
     $(this).val($(this).val().replace(/[^A-Za-z0-9]/g, ''))
 });
-$('#signUpFormGender').bind('keyup blur', function () {
-    $(this).val($(this).val().replace(/[^A-Za-z]/g, ''))
-});
+// $('#signUpFormGender').bind('keyup blur', function () {
+//     $(this).val($(this).val().replace(/[^A-Za-z]/g, ''))
+// });
 $('#signUpFormPhone').bind('keyup blur', function () {
     $(this).val($(this).val().replace(/[^0-9]/g, ''))
 });
