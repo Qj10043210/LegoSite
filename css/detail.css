@@ -272,6 +272,7 @@
   filter: brightness(130%);
 }
 #allbox #detailMain #detailMainRight ul #detailListButton #detailListButtonBuy.unview {
+  cursor: no-drop;
   background-color: black;
   opacity: 0.8;
 }
