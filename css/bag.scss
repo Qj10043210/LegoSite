@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Great+Vibes&family=Manrope&family=Montserrat+Alternates&family=Roboto+Flex:opsz@8..144&family=Ubuntu+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 #allbox {
     max-width: 1440px;
     min-width: 1440px;
@@ -14,6 +15,16 @@
     font-family: 'Noto Sans', sans-serif;
     font-size: 16px;
     position: relative;
+}
+#meButton{
+    position: fixed;
+    bottom: 50px;
+    right:200px;
+    button{
+        padding: 8px 10px 5px 10px;
+        font-size: 20px;
+        font-family: 'Press Start 2P';
+    }
 }
 #bagNoItems{
     // font-family: 'Great Vibes';
@@ -113,6 +124,9 @@
 
 }
 #bagTable{
+    position: absolute;
+    top:30px;
+
     .bagItem{
         display: flex;
         justify-content: space-between;
@@ -122,6 +136,7 @@
         margin-bottom: 10px;
         // border-bottom: 2px solid rgba(20,20,20,0.5);
         .bagImage{
+            margin-left: 20px;
             width: 250px;
             height: 250px;
             
@@ -135,8 +150,8 @@
             }
         }
         .bagName{
+            width: 646px;
             
-            flex-grow: 3;
             text-align: start;
             text-indent: 3em;
             font-family: 'Roboto Flex';
@@ -144,15 +159,23 @@
             
         }
         .bagPrice{
-            flex-grow: 1;
+            
             text-align: center;
             font-family: 'Roboto Flex';
             font-size: 20px;
+            display: flex;
+            align-items: end;
+            margin-right: 20px;
+            flex-direction: column-reverse;
             span.howdareyou{
-                display: none;
+                color: #333;
             }
-            &::before{
+            span.howdareyou::before{
                 content: "$";
+                padding-right: 10px;
+            }
+            span.howareyou::before{
+                content: "Total :";
                 padding-right: 10px;
             }
         }

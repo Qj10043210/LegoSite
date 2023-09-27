@@ -92,16 +92,18 @@
 #legoHeader #header #headerRight #headerSign div {
   cursor: pointer;
   padding: 0;
-  width: 30px;
+  width: 32px;
   height: 32px;
-  background-image: url(./images/legohead2.PNG);
+  background-image: url(./images/BtnPower.png);
+  filter: brightness(110%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   display: block;
   line-height: 32px;
 }
 #legoHeader #header #headerRight #headerSign div.loging {
-  background-image: url(./images/legohead.PNG);
+  background-image: url(./images/BtnPower.png);
+  filter: brightness(80%);
 }
 #legoHeader #header #headerRight #headerSign span {
   cursor: pointer;
