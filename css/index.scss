@@ -325,20 +325,75 @@
     }
     .helpBox {
         text-align: center;
-        
-        height: 400px;
+        height: 600px;
         width: 1440px;
         background-color: rgb(255,207,0);
-        
-        
         position: absolute;
-        
         display: block;
-        .helpBoxCharecter {
-            flex-grow: 1;
-        }
+        padding-top: 40px;
+        
         .helpBoxMiddle {
-            flex-grow: 2;
+            
+            position: relative;
+            margin-right: 300px;
+            &::before{
+                content: "";
+                position: absolute;
+                right:-450px;
+                width: 563px;
+                height: 748px;
+                z-index: 10;
+                background-size: 70% auto;
+                background-repeat: no-repeat;
+                background-image: url(./images/helpBoxCharecter.png);
+            }
+            
+            h3{
+                font-size: 50px;
+                font-weight: bold;
+                font-family: 'Black Ops One', cursive;
+                text-transform: capitalize;
+                color: #fff;
+                padding-top: 50px;
+            }
+            .socials {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 1rem 0 3rem 0;
+                font-size: 20px;
+
+                li {
+                    padding-top: 50px;
+                    padding-left: 20px;
+                }
+
+                .icon{
+                    display: inline-flex;
+                    margin-right: 20px;
+                    text-decoration: none;
+                    color: #fff;
+                    border: 5px solid #fff;
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    justify-content: center;
+                    align-items: center;
+                    i{  
+                        font-size: 60px;
+                        transition: color .4s ease;
+                        }
+                    }
+                .name {
+                    padding-top: 10px;
+                    font-size: 20px;
+                    margin-right: 20px;
+                    text-decoration: none;
+                    color: #fff;
+                    font-weight: bold;
+                }
+            }
         }
         .helpBoxNull {
             flex-grow: 1;
