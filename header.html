@@ -60,6 +60,7 @@ $(document).on("click",".headerMessageBoxYes", function(){
     $('#headerSign div').removeClass("loging")
     $('#headerMessageBox').addClass("unview")
     sessionStorage.removeItem("logname")
+    sessionStorage.removeItem("buys")
     loghead=11;
     sessionStorage.setItem("log", JSON.stringify(loghead))
     location.reload()
