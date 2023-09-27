@@ -23,7 +23,7 @@
                 <div></div><span>BAG</span>
             </div>
             <div id="headerPersonal">
-                <div></div><span class="unview">NAME</span>
+                <div></div><p class="personalHello"></p><p class="personalName"></p>
             </div>
         </div>
 
@@ -40,6 +40,8 @@
 console.log(loghead)
 if(loghead==22){
     $('#headerSign span').text("SIGN-OUT")
+    $('.personalHello').text("Hello")
+    $('.personalName').text(JSON.parse(sessionStorage.getItem("logname")))
     $('#headerSign div').addClass("loging")
     $(document).on("click","#headerSign",function(){
         $('#headerMessageBox').removeClass("unview")
@@ -78,7 +80,14 @@ $(document).on("click",".headerMessageBoxNo", function(){
     $(document).on("click", '#headerGoods', function(){
         location.href='./goods.html'
     })
-    // $(document).on("click", '#headerSignUp', function(){
-    //     location.href='./signup.html'
-    // })
+    $(document).on("click", '#headerShoplist', function(){
+        location.href='./bag.html'
+    })
+    
+    $(document).on("click", '#headerPersonal', function(){
+        
+            location.href='./personal.html'
+        
+    })
+
 </script>

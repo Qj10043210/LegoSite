@@ -125,12 +125,13 @@
 #legoHeader #header #headerRight #headerShoplist span {
   display: none;
 }
-#legoHeader #header #headerRight #headerPersonal span {
+#legoHeader #header #headerRight #headerPersonal p {
   cursor: pointer;
   display: block;
-}
-#legoHeader #header #headerRight #headerPersonal span.unview {
-  display: none;
+  word-break: keep-all;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #legoHeader #headerMessageBox {
   background-image: url(./images/messageSignOut.png);

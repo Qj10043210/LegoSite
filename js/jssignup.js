@@ -131,7 +131,7 @@ function takeShot() {
             phone: $('#signUpFormPhone').val(),
             picture: imageValue
         }
-        console.log(infoes)
+    
         let infoList = JSON.parse(localStorage.getItem("signupdata")) || [];
         infoList.push(infoes);
         localStorage.setItem("signupdata", JSON.stringify(infoList))

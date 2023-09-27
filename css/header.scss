@@ -157,13 +157,14 @@
             }
 
             #headerPersonal {
-                span {
+                p {
                     cursor: pointer;
                     display: block;
+                    word-break: keep-all;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
 
-                    &.unview {
-                        display: none;
-                    }
                 }
 
             }
